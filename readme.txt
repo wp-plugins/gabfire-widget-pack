@@ -3,7 +3,7 @@ Contributors: gabfire
 Tags: social icons, share post, text widget, about us, author badge, ajax tabs, Feedburner email subscribe, related posts, fickr images, search, popular entries, random entries, recent entries
 Requires at least: 3.4
 Tested up to: 3.5.1
-Stable tag: 1.0
+Stable tag: 0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,9 +92,9 @@ Manual Install:
 * Upload the `gabfire-widget-packt` directory to your `/wp-content/plugins` directory (do not rename the folder)
 * Go to the plugin management page and enable the plugin.
 * Activate the widgets you wish to enable from Appearance->Gabfire Widget Pack
-* Add the widget to your sidebar from Appearance->Widgets and configure the widget options.
+* Add the widget to your sidebar from Appearance->Widgets and configure the widet options.
 
 == Changelog ==
 
-= 0.1 =
+= 1.0 =
 * Initial version
