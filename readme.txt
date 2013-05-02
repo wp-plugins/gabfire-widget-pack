@@ -1,17 +1,17 @@
 === Gabfire Widget Pack ===
 Contributors: gabfire
-Tags: social icons, share post, text widget, about us, author badge, ajax tabs, Feedburner email subscribe, related posts, fickr images, search, popular entries, random entries, recent entries
+Tags: social icons, share post, text widget, about us, author badge, ajax tabs, Feedburner email subscribe, related posts, fickr images, search, popular entries, random entries, recent entries, gabfire themes
 Requires at least: 3.4
 Tested up to: 3.5.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The Gabfire Widget Pack is a free plugin for the Gabfire community.
+The Gabfire Widget Pack contains 12 useful widgets to extend your WordPress site. It is a free plugin that will work with any theme. 
 
 == Description ==
 
-The Gabfire Widget Pack is a free plugin for the Gabfire community. Below are the steps required to install, activate, and configure the Gabfire Widget Pack.
+The Gabfire Widget Pack is a free plugin for the WordPress community. Below are the steps required to install, activate, and configure the Gabfire Widget Pack.
 
 = Widget: Archive Search =
 Give your users the option to search to their heart's content. This powerful widget provides 3 methods to search:
@@ -78,23 +78,38 @@ Get more traffic and cross promote your posts with this social sharing widget. I
 * Google+ Box
 * Pinterest Pin 
 
-= Widget: Text Widget =
+= Widget: Text+ Widget =
 A slight twist on the original. This text widget gives you the ability to have an icon and button that links to any post or page of your choice. 
 
 == Installation ==
 
-You can quickly install the plugin by going to Plugins->Add New from your dashboard and typing `Gabfire Widget Pack` into the search area. Full instructions will be provided during installation via WordPress admin dashboard.
+You can install the Gabfire Widget Pack from your WordPress Dashboard or manually via FTP. 
 
-= Manual Install =
+= From WordPress Dashboard =
 
-* Download `gabfire-widget-pack.zip`
-* Unzip
-* Upload the `gabfire-widget-packt` directory to your `/wp-content/plugins` directory (do not rename the folder)
-* Go to the plugin management page and enable the plugin.
-* Activate the widgets you wish to enable from Appearance->Gabfire Widget Pack
-* Add the widget to your sidebar from Appearance->Widgets and configure the widet options.
+# Navigate to 'Plugins -> Add New' from your WordPress dashboard. 
+# Search for `Gabfire Widget Pack` and install it. 
+# Activate the plugin from Plugins menu.
+# Enable the widgets you wish to activate from Appearance -> Gabfire Widget Pack
+# Add any widget to your widget zone from Appearance -> Widgets and configure the widget options.
+
+= Manual Installation =
+
+# Download `gabfire-widget-pack.zip`
+# Unzip
+# Upload the `gabfire-widget-pack` folder to your `/wp-content/plugins` directory (do not rename the folder)
+# Activate the plugin from Plugins menu.
+# Enable the widgets you wish to activate from 'Appearance -> Gabfire Widget Pack'.
+# Add any widget to your widget zone from 'Appearance -> Widgets' and configure the widget options.
+
+== Screenshots ==
+
+Widget settings
 
 == Changelog ==
 
+= 1.0.1 =
+* Options panel alignment fix
+
 = 1.0 =
-* Initial version
+* Initial release
