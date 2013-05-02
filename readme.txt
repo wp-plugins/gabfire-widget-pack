@@ -87,20 +87,20 @@ You can install the Gabfire Widget Pack from your WordPress Dashboard or manuall
 
 = From WordPress Dashboard =
 
-# Navigate to 'Plugins -> Add New' from your WordPress dashboard. 
-# Search for `Gabfire Widget Pack` and install it. 
-# Activate the plugin from Plugins menu.
-# Enable the widgets you wish to activate from Appearance -> Gabfire Widget Pack
-# Add any widget to your widget zone from Appearance -> Widgets and configure the widget options.
+* Navigate to 'Plugins -> Add New' from your WordPress dashboard. 
+* Search for `Gabfire Widget Pack` and install it. 
+* Activate the plugin from Plugins menu.
+* Enable the widgets you wish to activate from Appearance -> Gabfire Widget Pack
+* Add any widget to your widget zone from Appearance -> Widgets and configure the widget options.
 
 = Manual Installation =
 
-# Download `gabfire-widget-pack.zip`
-# Unzip
-# Upload the `gabfire-widget-pack` folder to your `/wp-content/plugins` directory (do not rename the folder)
-# Activate the plugin from Plugins menu.
-# Enable the widgets you wish to activate from 'Appearance -> Gabfire Widget Pack'.
-# Add any widget to your widget zone from 'Appearance -> Widgets' and configure the widget options.
+* Download `gabfire-widget-pack.zip`
+* Unzip
+* Upload the `gabfire-widget-pack` folder to your `/wp-content/plugins` directory (do not rename the folder)
+* Activate the plugin from Plugins menu.
+* Enable the widgets you wish to activate from 'Appearance -> Gabfire Widget Pack'.
+* Add any widget to your widget zone from 'Appearance -> Widgets' and configure the widget options.
 
 == Screenshots ==
 
