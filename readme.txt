@@ -104,8 +104,19 @@ You can install the Gabfire Widget Pack from your WordPress Dashboard or manuall
 
 == Screenshots ==
 
-Widget settings
-
+1. Widget: About Us
+2. Widget: Archive Search
+3. Widget: Author Badge
+4. Widget: Feedburner Email Subscribe
+5. Widget: Flickr Images
+6. Widget: Text+
+7. Widget: Widget options page
+8. Widget: Recent or Popular Posts Widget
+9. Widget: Post tabs
+10. Widget: Related Posts Thumb
+11. Widget: Search
+12. Widget: Social Icons
+13. Widget: Share Items
 == Changelog ==
 
 = 1.0.1 =
