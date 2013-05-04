@@ -13,6 +13,9 @@ The Gabfire Widget Pack contains 12 useful widgets to extend your WordPress site
 
 The Gabfire Widget Pack is a free plugin for the WordPress community. Below are the steps required to install, activate, and configure the Gabfire Widget Pack.
 
+Github Project Page
+https://github.com/gabfire/gabfire-widget-pack
+
 = Widget: Archive Search =
 Give your users the option to search to their heart's content. This powerful widget provides 3 methods to search:
 
