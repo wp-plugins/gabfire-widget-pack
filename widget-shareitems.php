@@ -45,60 +45,49 @@ class gab_share extends WP_Widget {
 				}
 			}
 				if($box_or_button == 0) {
-					if($boxg1) {
-						echo '<div class="google-share-button"><div class="g-plus" data-action="share" data-annotation="bubble"></div></div>';
-						add_action("wp_footer", "gabfire_share_google");
-					}		
-				
 					if($boxtweet) {
 						echo '<div class="twitter-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-url="'.get_permalink().'" data-text="'. get_the_title() .'" data-lang="'. substr(get_bloginfo ( 'language' ), 0, 2) .'"></a></div>';
 						add_action("wp_footer", "gabfire_share_twitter"); 
+					}
+					if($boxg1) {
+						echo '<div class="google-share-button"><div class="g-plus" data-action="share" data-annotation="bubble"></div></div>';
+						add_action("wp_footer", "gabfire_share_google");
 					}
 					if($boxlike) {
 						echo '<div class="facebook-share-button"><div class="fb-like" data-href="'.get_permalink().'" data-send="false" data-layout="button_count" data-width="80" data-show-faces="true"></div></div>';
 						add_action("wp_footer", "gabfire_share_facebook"); 
 					}
-					
 					if($boxpinterest) { 
 						echo '<div class="pinterest-share-button"><a href="http://pinterest.com/pin/create/button/?url='. urlencode(get_permalink()) .'&media='. urlencode($image[0]) .'&description='. get_the_excerpt() .'" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="';_e('Pin It','gabfire-widget-pack'); echo'" /></a></div>';
 						add_action("wp_footer", "gabfire_share_pinterest");
-					}							
-					
+					}
 					if($boxlinkedin) { 
 						echo '<div class="linkedin-share-button"><script type="IN/Share" data-url="www.gabfirethemes.com" data-counter="right"></script></div>';
 						add_action("wp_footer", "gabfire_share_linkedin");
 					}
-									
-						
 				} else {
-					if($boxg1) {
-						echo '<div class="google-share-box"><div class="g-plusone" data-size="tall"></div></div>';
-						add_action("wp_footer", "gabfire_share_google");
-					}		
-				
-					if($boxlike) {
-						echo '<div class="facebook-share-box"><div class="fb-like" data-href="'.get_permalink().'" data-send="false" data-layout="box_count" data-width="65" data-show-faces="false"></div>
-						</div>';
-						add_action("wp_footer", "gabfire_share_facebook");
-					}				
-				
 					if($boxtweet) {
 						echo '<div class="twitter-share-box"><a href="https://twitter.com/share" class="twitter-share-button" data-url="'. get_permalink() .'" data-counturl="'.get_permalink().'" data-text="'. get_the_title() .'" data-lang="'. substr(get_bloginfo ( 'language' ), 0, 2) .'" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a></div>';
 						add_action("wp_footer", "gabfire_share_twitter"); 
 					}
-
+					if($boxg1) {
+						echo '<div class="google-share-box"><div class="g-plusone" data-size="tall"></div></div>';
+						add_action("wp_footer", "gabfire_share_google");
+					}
+					if($boxlike) {
+						echo '<div class="facebook-share-box"><div class="fb-like" data-href="'.get_permalink().'" data-send="false" data-layout="box_count" data-width="65" data-show-faces="false"></div>
+						</div>';
+						add_action("wp_footer", "gabfire_share_facebook");
+					}
 					if($boxlinkedin) { 
 						echo '<div class="linkedin-share-box"><script type="IN/Share" data-url="www.gabfirethemes.com" data-counter="top"></script></div>';
 						add_action("wp_footer", "gabfire_share_linkedin");
-					}						
-					
+					}
 					if($boxpinterest) { 
 						echo '<div class="pinterest-share-box"><a href="http://pinterest.com/pin/create/button/?url='. urlencode(get_permalink()) .'&media='. urlencode($image[0]) .'&description='. get_the_excerpt() .'" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="';_e('Pin It','gabfire-widget-pack'); echo'" /></a></div>';
 						add_action("wp_footer", "gabfire_share_pinterest");
 					}
-					
-				}			
-				
+				}	
 			if(($boxtweet == 1) or ($boxg1 == 1) or ($boxlike == 1) or ($boxpinterest == 1)) {
 				echo '</div><div class="clearfix"></div>';
 			}

@@ -134,6 +134,11 @@ You can install the Gabfire Widget Pack from your WordPress Dashboard or manuall
 
 == Changelog ==
 
+New Changes
+
+= 1.3 =
+* Share items - new button alignment.
+
 = 1.2 =
 * New Widget - Gabfire Recent Tweets
 * Admin panel change

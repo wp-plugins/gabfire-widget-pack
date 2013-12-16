@@ -271,7 +271,8 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
     margin: 0 0 5px;
     color: #444;
     border: 1px solid #ddd;
-    height: 30px;
+    height: auto;
+	padding:5px;
     margin-bottom: 15px;
 }
 
