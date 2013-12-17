@@ -19,7 +19,7 @@
     GNU General Public License for more details.    
 */
 
-define( 'GABFIRE_WIDGETS_VERSION', '1.2');
+define( 'GABFIRE_WIDGETS_VERSION', '1.3');
 define( 'GABFIRE_WIDGETS_DIR', dirname(__FILE__) );
 define( 'GABFIRE_WIDGETS_URL', plugins_url().'/gabfire-widget-pack' );
 
