@@ -24,7 +24,7 @@ class gabfire_flickrrss extends WP_Widget {
 			}
 
 			echo '
-				<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count='; 
+				<script type="text/javascript" src="//www.flickr.com/badge_code_v2.gne?count='; 
 				if ( $photo_number ) {
 					printf( '%1$s', esc_attr( $photo_number ) ); echo '&amp;display=';
 				}
