@@ -141,9 +141,7 @@ New Changes
 
 = 1.3 =
 * Share items - new button alignment.
-* Flickr widget https support
-
-= 1.2 =
+* Flickr widget https support= 1.2 =
 * New Widget - Gabfire Recent Tweets
 * Admin panel change
 

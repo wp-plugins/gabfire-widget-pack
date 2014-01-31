@@ -4,7 +4,7 @@
 	Plugin URI: http://www.gabfirethemes.com
 	Description: This plugin adds a bundle of the most commonly used widgets to your site.
 	Author: Gabfire Themes
-	Version: 1.3
+	Version: 1.3.1
 	Author URI: http://www.gabfirethemes.com
 	
     Copyright 2013 Gabfire Themes (email : info@gabfire.com)
@@ -44,19 +44,19 @@ $gabfire_options = get_option('gab_options');
  */
  
 $gabfire_default_option = array(
-	'about_widget' 		=> 1,
-	'contact_info' 		=> 1,
-	'archive_widget' 	=> 1,
-	'ajaxtabs' 			=> 1,
-	'authorbadge' 		=> 1,
-	'feedburner' 		=> 1,
-	'flickrrss' 		=> 1,
-	'search' 			=> 1,
-	'share' 			=> 1,
-	'social' 			=> 1,
-	'text_widget' 		=> 1,
-	'popular_random' 	=> 1,
-	'recent_tweets' 	=> 1
+	'about_widget' 		=> 0,
+	'contact_info' 		=> 0,
+	'archive_widget' 	=> 0,
+	'ajaxtabs' 			=> 0,
+	'authorbadge' 		=> 0,
+	'feedburner' 		=> 0,
+	'flickrrss' 		=> 0,
+	'search' 			=> 0,
+	'share' 			=> 0,
+	'social' 			=> 0,
+	'text_widget' 		=> 0,
+	'popular_random' 	=> 0,
+	'recent_tweets' 	=> 0
 );
 
 if (false === $gabfire_options) {
