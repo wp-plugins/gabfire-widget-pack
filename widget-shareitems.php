@@ -65,7 +65,7 @@ class gab_share extends WP_Widget {
 					}							
 					
 					if($boxlinkedin) { 
-						echo '<div class="linkedin-share-button"><script type="IN/Share" data-url="www.gabfirethemes.com" data-counter="right"></script></div>';
+						echo '<div class="linkedin-share-button"><script type="IN/Share" data-url="'.get_permalink().'" data-counter="right"></script></div>';
 						add_action("wp_footer", "gabfire_share_linkedin");
 					}
 									
@@ -88,7 +88,7 @@ class gab_share extends WP_Widget {
 					}
 
 					if($boxlinkedin) { 
-						echo '<div class="linkedin-share-box"><script type="IN/Share" data-url="www.gabfirethemes.com" data-counter="top"></script></div>';
+						echo '<div class="linkedin-share-box"><script type="IN/Share" data-url="'.get_permalink().'" data-counter="top"></script></div>';
 						add_action("wp_footer", "gabfire_share_linkedin");
 					}						
 					
