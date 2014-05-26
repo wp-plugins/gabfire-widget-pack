@@ -6,6 +6,7 @@ Tested up to: 3.9
 Stable tag: 1.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Contributors: gabfire, kjbenk
 
 The Gabfire Widget Pack contains over a dozen useful widgets to extend your WordPress site. It is a free plugin that will work with ANY theme. 
 
