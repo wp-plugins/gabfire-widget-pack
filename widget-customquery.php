@@ -185,7 +185,7 @@ class gab_custom_query extends WP_Widget {
 		</p>
 		
         <p>
-			<label for="<?php echo $this->get_field_id('c_image'); ?>"><?php _e('Section or Category Image URL (replaces text title)','gabfire-widget-pack'); ?> <span style="color:#aaa">(ex: http://www.domain.com/image.jpg)</span></label> 
+			<label for="<?php echo $this->get_field_id('c_image'); ?>"><?php _e('Section or Category Image URL (replaces text title)','gabfire-widget-pack'); ?> <span style="color:#aaa"><?php _e('ex: //www.domain.com/image.jpg)', 'gabfire-widget-pack'); ?></span></label> 
 			<input class="widefat"  id="<?php echo $this->get_field_id('c_image'); ?>" name="<?php echo $this->get_field_name('c_image'); ?>" type="text" value="<?php echo esc_attr( $instance['c_image'] ); ?>" />
         </p>
 
@@ -203,7 +203,7 @@ class gab_custom_query extends WP_Widget {
         </p>
 		
         <p>
-            <label for="<?php echo $this->get_field_id('postids'); ?>"><?php _e('Enter <a href="http://www.gabfirethemes.com/how-to-check-category-ids/">Category ID(s)</a> - OR - Post/Page ID(s)','gabfire-widget-pack'); ?> <span style="color:#aaa"><?php _e('(ex:3,5,99 comma separated, no spaces)','gabfire-widget-pack'); ?></span></label>
+            <label for="<?php echo $this->get_field_id('postids'); ?>"><?php _e('Enter <a href="//www.gabfirethemes.com/how-to-check-category-ids/">Category ID(s)</a> - OR - Post/Page ID(s)','gabfire-widget-pack'); ?> <span style="color:#aaa"><?php _e('(ex:3,5,99 comma separated, no spaces)','gabfire-widget-pack'); ?></span></label>
             <input class="widefat"  id="<?php echo $this->get_field_id('postids'); ?>" name="<?php echo $this->get_field_name('postids'); ?>" type="text" value="<?php echo esc_attr( $instance['postids'] ); ?>" />
         </p>   		
 		

@@ -60,7 +60,7 @@ class gab_share extends WP_Widget {
 					}
 					
 					if($boxpinterest) { 
-						echo '<div class="pinterest-share-button"><a href="http://pinterest.com/pin/create/button/?url='. urlencode(get_permalink()) .'&media='. urlencode($image[0]) .'&description='. get_the_excerpt() .'" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="';_e('Pin It','gabfire-widget-pack'); echo'" /></a></div>';
+						echo '<div class="pinterest-share-button"><a href="//pinterest.com/pin/create/button/?url='. urlencode(get_permalink()) .'&media='. urlencode($image[0]) .'&description='. get_the_excerpt() .'" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="';_e('Pin It','gabfire-widget-pack'); echo'" /></a></div>';
 						add_action("wp_footer", "gabfire_share_pinterest");
 					}							
 					
@@ -93,7 +93,7 @@ class gab_share extends WP_Widget {
 					}						
 					
 					if($boxpinterest) { 
-						echo '<div class="pinterest-share-box"><a href="http://pinterest.com/pin/create/button/?url='. urlencode(get_permalink()) .'&media='. urlencode($image[0]) .'&description='. get_the_excerpt() .'" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="';_e('Pin It','gabfire-widget-pack'); echo'" /></a></div>';
+						echo '<div class="pinterest-share-box"><a href="//pinterest.com/pin/create/button/?url='. urlencode(get_permalink()) .'&media='. urlencode($image[0]) .'&description='. get_the_excerpt() .'" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="';_e('Pin It','gabfire-widget-pack'); echo'" /></a></div>';
 						add_action("wp_footer", "gabfire_share_pinterest");
 					}
 					
@@ -103,10 +103,10 @@ class gab_share extends WP_Widget {
 				echo '</div><div class="clearfix"></div>';
 			}
 			if($fbook) {
-				echo '<a target="_blank" rel="nofollow" class="facebook" href="http://www.facebook.com/share.php?u='.get_permalink().'&t=';the_title(); echo '" title="'; _e('Share on Facebook' , 'gabfire-widget-pack'); echo' ">Facebook</a>';			
+				echo '<a target="_blank" rel="nofollow" class="facebook" href="//www.facebook.com/share.php?u='.get_permalink().'&t=';the_title(); echo '" title="'; _e('Share on Facebook' , 'gabfire-widget-pack'); echo' ">Facebook</a>';			
 			}
 			if($tweet) {
-				echo '<a target="_blank" rel="nofollow" class="twitter" href="http://twitter.com/home?status='.get_the_title() .' '.get_permalink().'" title="'; _e('Share on Twitter' , 'gabfire-widget-pack'); echo' ">Twitter</a>';
+				echo '<a target="_blank" rel="nofollow" class="twitter" href="//twitter.com/home?status='.get_the_title() .' '.get_permalink().'" title="'; _e('Share on Twitter' , 'gabfire-widget-pack'); echo' ">Twitter</a>';
 			}
 			if($plus1) {
 				echo '<a target="_blank" rel="nofollow" class="plus1" href="https://plusone.google.com/_/+1/confirm?hl=en&url='.get_permalink().'" title="'; _e('Share on Google1' , 'gabfire-widget-pack'); echo' ">Google1</a>';
@@ -122,31 +122,31 @@ class gab_share extends WP_Widget {
 				echo '<a target="_blank" rel="nofollow" class="email" href="mailto:?subject='.rawurlencode($subject).'&amp;body='.rawurlencode($body).'" title="'.$text.' : '.$title.'">Email</a>';
 			}
 			if($dlc) {
-				echo '<a target="_blank" rel="nofollow" class="delicious" href="http://del.icio.us/post?url='.get_permalink().'&title=';the_title(); echo '" title="'; _e('Share on Delicious' , 'gabfire-widget-pack'); echo' ">Delicious</a>';
+				echo '<a target="_blank" rel="nofollow" class="delicious" href="//del.icio.us/post?url='.get_permalink().'&title=';the_title(); echo '" title="'; _e('Share on Delicious' , 'gabfire-widget-pack'); echo' ">Delicious</a>';
 			}
 			if($digg) {
-				echo '<a target="_blank" rel="nofollow" class="digg" href="http://digg.com/submit?url='.get_permalink().'&title=';the_title(); echo '" title="'; _e('Share on Digg' , 'gabfire-widget-pack'); echo' ">Digg</a>';
+				echo '<a target="_blank" rel="nofollow" class="digg" href="//digg.com/submit?url='.get_permalink().'&title=';the_title(); echo '" title="'; _e('Share on Digg' , 'gabfire-widget-pack'); echo' ">Digg</a>';
 			}
 			if($google) {
-				echo '<a target="_blank" rel="nofollow" class="google2" href="http://www.google.com/bookmarks/mark?op=add&bkmk='.get_permalink().'&title=';the_title(); echo '" title="'; _e('Share on Google' , 'gabfire-widget-pack'); echo' ">Google</a>';
+				echo '<a target="_blank" rel="nofollow" class="google2" href="//www.google.com/bookmarks/mark?op=add&bkmk='.get_permalink().'&title=';the_title(); echo '" title="'; _e('Share on Google' , 'gabfire-widget-pack'); echo' ">Google</a>';
 			}
 			if($supon) {
-				echo '<a target="_blank" rel="nofollow" class="stumbleupon" href="http://www.stumbleupon.com/submit?url='.get_permalink().'&title=';the_title(); echo '" title="'; _e('Share on StumbleUpon' , 'gabfire-widget-pack'); echo' ">Stumbleupon</a>';
+				echo '<a target="_blank" rel="nofollow" class="stumbleupon" href="//www.stumbleupon.com/submit?url='.get_permalink().'&title=';the_title(); echo '" title="'; _e('Share on StumbleUpon' , 'gabfire-widget-pack'); echo' ">Stumbleupon</a>';
 			}
 			if($reddit) {
-				echo '<a target="_blank" rel="nofollow" class="reddit" href="http://reddit.com/submit?url='.get_permalink().'&title=';the_title(); echo '" title="'; _e('Share on Reddit' , 'gabfire-widget-pack'); echo' ">Reddit</a>';
+				echo '<a target="_blank" rel="nofollow" class="reddit" href="//reddit.com/submit?url='.get_permalink().'&title=';the_title(); echo '" title="'; _e('Share on Reddit' , 'gabfire-widget-pack'); echo' ">Reddit</a>';
 			}
 			if($tech) {
-				echo '<a target="_blank" rel="nofollow" class="technorati" href="http://technorati.com/faves?sub=favthis&add='.get_permalink().'" title="'; _e('Share on Technorati' , 'gabfire-widget-pack'); echo' ">Technorati</a>';
+				echo '<a target="_blank" rel="nofollow" class="technorati" href="//technorati.com/faves?sub=favthis&add='.get_permalink().'" title="'; _e('Share on Technorati' , 'gabfire-widget-pack'); echo' ">Technorati</a>';
 			}
 			if($yahoo) {
-				echo '<a target="_blank" rel="nofollow" class="yahoo" href="http://buzz.yahoo.com/buzz?targetUrl='.get_permalink().'&headline=';the_title(); echo '" title="'; _e('Share on Yahoo' , 'gabfire-widget-pack'); echo' ">Yahoo</a>';
+				echo '<a target="_blank" rel="nofollow" class="yahoo" href="//buzz.yahoo.com/buzz?targetUrl='.get_permalink().'&headline=';the_title(); echo '" title="'; _e('Share on Yahoo' , 'gabfire-widget-pack'); echo' ">Yahoo</a>';
 			}
 			if($blogger) {
-				echo '<a target="_blank" rel="nofollow" class="blogger" href="http://www.blogger.com/blog_this.pyra?t&u='.get_permalink().'&n=';the_title(); echo '&pli=1" title="'; _e('Share on Blogger' , 'gabfire-widget-pack'); echo' ">Blogger</a>';
+				echo '<a target="_blank" rel="nofollow" class="blogger" href="//www.blogger.com/blog_this.pyra?t&u='.get_permalink().'&n=';the_title(); echo '&pli=1" title="'; _e('Share on Blogger' , 'gabfire-widget-pack'); echo' ">Blogger</a>';
 			}
 			if($myspace) {
-				echo '<a target="_blank" rel="nofollow" class="myspace" href="http://www.myspace.com/Modules/PostTo/Pages/?u='.get_permalink().'&t=';the_title(); echo '&c='.get_permalink().'" title="'; _e('Share on Myspace' , 'gabfire-widget-pack'); echo' ">Myspace</a>';
+				echo '<a target="_blank" rel="nofollow" class="myspace" href="//www.myspace.com/Modules/PostTo/Pages/?u='.get_permalink().'&t=';the_title(); echo '&c='.get_permalink().'" title="'; _e('Share on Myspace' , 'gabfire-widget-pack'); echo' ">Myspace</a>';
 			}
 			if($rss) {
 				echo '<a target="_blank" rel="nofollow" class="rss" href="'.get_post_comments_feed_link($post->ID) .'" title="'; _e('RSS Feed' , 'gabfire-widget-pack'); echo' ">RSS</a>';

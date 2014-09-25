@@ -24,7 +24,7 @@ class gabfire_flickrrss extends WP_Widget {
 			}
 
 			echo '
-				<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count='; 
+				<script type="text/javascript" src="//www.flickr.com/badge_code_v2.gne?count='; 
 				if ( $photo_number ) {
 					printf( '%1$s', esc_attr( $photo_number ) ); echo '&amp;display=';
 				}
@@ -104,7 +104,7 @@ class gabfire_flickrrss extends WP_Widget {
 			
 			<div rel="flickr_id">
 				<p>
-					<label for="<?php echo $this->get_field_id( 'flickr_id' ); ?>"><?php _e('User or Group ID','gabfire-widget-pack'); ?> <a href="http://idgettr.com/"><?php _e('Get your Flickr ID','gabfire-widget-pack'); ?></a></label>
+					<label for="<?php echo $this->get_field_id( 'flickr_id' ); ?>"><?php _e('User or Group ID','gabfire-widget-pack'); ?> <a href="//idgettr.com/"><?php _e('Get your Flickr ID','gabfire-widget-pack'); ?></a></label>
 					<input id="<?php echo $this->get_field_id( 'flickr_id' ); ?>" name="<?php echo $this->get_field_name( 'flickr_id' ); ?>" value="<?php echo esc_attr( $instance['flickr_id'] ); ?>" class="widefat" />
 				</p>
 			</div>

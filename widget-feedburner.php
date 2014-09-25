@@ -27,7 +27,7 @@ class gabfire_feedburner extends WP_Widget {
 					}
 					?>
 					
-					<form class="gabfire_f_widget" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=<?php echo esc_attr( $user ); ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+					<form class="gabfire_f_widget" action="//feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('//feedburner.google.com/fb/a/mailverify?uri=<?php echo esc_attr( $user ); ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
 						<fieldset <?php if ( $bgcol ) { echo 'style="background:' . esc_attr( $bgcol ) .';border:1px solid ' . esc_attr( $bordercol ) .';"'; } ?>>
 							<input type="mailinput" style="width:80%;color:<?php echo esc_attr( $textcol ); ?>;<?php if ( $bgcol ) { echo 'background:' . esc_attr( $bgcol ); } ?>" class="text" name="email" value="<?php echo esc_attr( $text ); ?>" onfocus="if (this.value == '<?php echo esc_attr( $text ); ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php echo esc_attr( $text ); ?>';}" />
 							<input type="hidden" value="<?php echo esc_attr( $user ); ?>" name="uri" />
@@ -39,7 +39,7 @@ class gabfire_feedburner extends WP_Widget {
 					
 					<div class="news-signup" <?php if ( $bgurl ) { echo 'style="background:url(' . esc_attr( $bgurl ) .') repeat top center"'; } ?>>	
 						<h3 class="widgettitle"><?php echo esc_attr( $title ); ?></h3>
-						<form class="sidebar_feedwidget" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=<?php echo esc_attr( $user ); ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+						<form class="sidebar_feedwidget" action="//feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('//feedburner.google.com/fb/a/mailverify?uri=<?php echo esc_attr( $user ); ?>', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
 							<fieldset>
 								<input type="mailinput" class="sidebar_mailinput" name="email" value="<?php echo esc_attr( $text ); ?>" onfocus="if (this.value == '<?php echo esc_attr( $text ); ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php echo esc_attr( $text ); ?>';}" />
 							<input type="hidden" value="<?php echo esc_attr( $user ); ?>" name="uri" />

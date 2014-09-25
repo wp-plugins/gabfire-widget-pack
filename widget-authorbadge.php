@@ -56,7 +56,7 @@ class gabfire_authorbadge extends WP_Widget {
 					<h3 class="widget-innertitle"><?php echo $social_heading; ?></h3>
 					
 					<?php if ( get_the_author_meta( 'twitter' ) ) { ?>
-						<a class="author_social t_link" href="http://www.twitter.com/<?php the_author_meta('twitter'); ?>" rel="nofollow" target="_blank">
+						<a class="author_social t_link" href="//www.twitter.com/<?php the_author_meta('twitter'); ?>" rel="nofollow" target="_blank">
 							<?php echo $f_twitter; ?>
 						</a>
 					<?php } ?>

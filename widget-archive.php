@@ -46,7 +46,7 @@ class gabfire_archive extends WP_Widget {
 						dropdown.onchange = onCatChange;
 					--></script>
 							
-					<form method="get" action="http://www.google.com/search">
+					<form method="get" action="//www.google.com/search">
 						<label><?php echo esc_attr( $google ); ?></label>
 						<input name="q" class="google" value="<?php echo esc_attr( $google_df ); ?>" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" /> 
 						<input type="hidden" name="sitesearch" value="<?php echo esc_url( home_url( '/' ) ); ?>" />
