@@ -1,6 +1,8 @@
 <?php
 if (!function_exists('gabfire_ajaxtabs_js')) {
 	function gabfire_ajaxtabs_js() {
+		wp_deregister_script( 'jquery' );
+		wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');
 		wp_enqueue_script('jquerytools', plugins_url() .'/gabfire-widget-pack/js/jquery.tools.min.js',array( 'jquery' ));
 	}
 	add_action( 'wp_enqueue_scripts', 'gabfire_ajaxtabs_js' );

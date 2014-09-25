@@ -135,7 +135,7 @@ You can install the Gabfire Widget Pack from your WordPress Dashboard or manuall
 == Changelog ==
 
 = 1.3.15 =
-* Removed reference to remote jQuery file
+* https compatibility
 
 = 1.3.14 =
 * Widget Ajax Tabs JS call update
