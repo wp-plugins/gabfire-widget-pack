@@ -157,6 +157,7 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
 
 .panes .wp-post-image {
     width: 35px;
+	height: 35px;
     line-height: 0;
     margin: 2px 0 0 7px;
     float: right;
