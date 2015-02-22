@@ -1,5 +1,7 @@
 <?php
- class gabfire_simplead extends WP_Widget {
+if ( !defined('ABSPATH')) exit;
+
+class gabfire_simplead extends WP_Widget {
 
 	function gabfire_simplead() {
 		$widget_ops = array( 'classname' => 'gabfire_simplead_widget', 'description' => __('Gabfire Widget: Simple Banner', 'gabfire'));

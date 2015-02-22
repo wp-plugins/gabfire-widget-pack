@@ -1,5 +1,4 @@
 <?php
-// Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
 
 class gab_custom_query extends WP_Widget {

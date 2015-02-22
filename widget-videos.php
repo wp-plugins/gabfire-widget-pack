@@ -1,4 +1,6 @@
 <?php
+if ( !defined('ABSPATH')) exit;
+
 function gabfire_videos_scripts() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_style('owl-carousel', GABFIRE_WIDGETS_URL .'/css/owl.carousel.css');

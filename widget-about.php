@@ -1,5 +1,4 @@
 <?php
-// Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
 
 class gabfire_about extends WP_Widget {
