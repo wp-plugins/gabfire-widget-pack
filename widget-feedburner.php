@@ -1,4 +1,7 @@
 <?php
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+  
 class gabfire_feedburner extends WP_Widget {
 
 	function gabfire_feedburner() {
@@ -7,7 +10,7 @@ class gabfire_feedburner extends WP_Widget {
 		$this->WP_Widget( 'gabfire_feedburner_widget', 'Gabfire: Feedburner Email Subscribe', $widget_ops, $control_ops);
 	}	
 	
-	function widget( $args, $instance ) {
+	public function widget( $args, $instance ) {
 		extract( $args );
 		$title = apply_filters('widget_title', $instance['title'] );
 		$user	= $instance['user'];
@@ -52,7 +55,7 @@ class gabfire_feedburner extends WP_Widget {
 				<?php } ?>			
 			
 			<?php 
-		echo $after_widget; 
+		echo "<div class='clear'></div>$after_widget"; 
 	}
 	
 	function update( $new_instance, $old_instance ) {

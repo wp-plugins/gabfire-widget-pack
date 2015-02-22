@@ -1,4 +1,7 @@
 <?php
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
 /* ********************
  * Add Twitter, Google+, LinkedIn and Facebook fields
  * into WordPress admin -> user field.
@@ -33,7 +36,7 @@ class gabfire_authorbadge extends WP_Widget {
 		$this->WP_Widget( 'gabfire_authorbadge', 'Gabfire: Author Badge', $widget_ops, $control_ops);	
 	}
 	
-	function widget($args, $instance) {
+	public function widget($args, $instance) {
 		extract( $args );
 		$picsize     = $instance['picsize'];
 		$f_twitter     = $instance['f_twitter'];
@@ -46,7 +49,7 @@ class gabfire_authorbadge extends WP_Widget {
 		if ( get_the_author_meta( 'description' ) and (is_single() or is_author()) ) {
 		echo $before_widget;
 				?>
-					<h3 class="widgettitle"><?php printf( esc_attr__( 'About %s', 'gabfire-widget-pack' ), get_the_author() ); ?></h3>
+					<p class="first_p"><?php printf( esc_attr__( 'About %s', 'gabfire-widget-pack' ), get_the_author() ); ?></p>
 					
 					<p>
 						<?php echo get_avatar( get_the_author_meta('email'), $picsize ); ?>
@@ -84,7 +87,7 @@ class gabfire_authorbadge extends WP_Widget {
 							<?php echo $f_viewwebsite; ?>
 						</a>
 					<?php } 
-		echo $after_widget; 
+		echo "<div class='clear'></div>$after_widget"; 
 		}
 	}
 		
@@ -112,7 +115,9 @@ class gabfire_authorbadge extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $defaults ); 
 	?>
 	
-		<p style="background-color: #efefef;border:1px solid #ddd;padding:10px;"><?php _e('Author badge shows at single post and author pages only. This badge will not shown if Author bio is left empty.','gabfire-widget-pack'); ?><p>
+		<p class="gabfire_widgetinfo">
+			<?php _e('Author badge shows at single post and author pages only. This badge will not shown if Author bio is left empty.','gabfire-widget-pack'); ?>
+		<p>
 				
 		<strong><?php _e('Link Label:','gabfire-widget-pack'); ?></strong>
 		<div style="background-color: #efefef;border:1px solid #ddd;padding:9px;overflow:hidden;margin-bottom:10px">

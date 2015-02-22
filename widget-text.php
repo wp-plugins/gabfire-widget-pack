@@ -1,4 +1,7 @@
 <?php
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
 class gab_text_widget extends WP_Widget {
 
 	function gab_text_widget() {
@@ -7,7 +10,7 @@ class gab_text_widget extends WP_Widget {
 		$this->WP_Widget( 'gab_text_widget', 'Gabfire: Text+ Widget', $widget_ops, $control_ops);	
 	}
 	
-	function widget($args, $instance) {
+	public function widget($args, $instance) {
 		extract( $args );
 		$title	= $instance['title'];
 		$icon	= $instance['icon'];
@@ -40,7 +43,7 @@ class gab_text_widget extends WP_Widget {
 			
 			if ($wstyle !== "small") { echo "</div>"; }
 					
-		echo $after_widget; 
+		echo "<div class='clear'></div>$after_widget"; 
 	}
 	
 	function update($new_instance, $old_instance) {  

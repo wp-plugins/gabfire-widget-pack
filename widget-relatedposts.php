@@ -1,5 +1,7 @@
 <?php
-/* Widget */
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
 class gabfire_relatedposts extends WP_Widget {
 
 	function gabfire_relatedposts() {
@@ -8,7 +10,7 @@ class gabfire_relatedposts extends WP_Widget {
 		$this->WP_Widget( 'gabfire_relatedposts', 'Gabfire: Related Posts Thumbs', $widget_ops, $control_ops);	
 	}
 	
-	function widget($args, $instance) {
+	public function widget($args, $instance) {
 		extract( $args );
 		$title    = $instance['title'];
 		$postnr    = $instance['postnr'];
@@ -73,7 +75,7 @@ class gabfire_relatedposts extends WP_Widget {
 				}
 			}
 			wp_reset_query();
-		echo $after_widget;
+		echo "<div class='clear'></div>$after_widget";
 		}
 		
 	function update($new_instance, $old_instance) {  

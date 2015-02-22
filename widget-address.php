@@ -1,4 +1,7 @@
 <?php
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
 class gabfire_contactus extends WP_Widget {
 
 	function gabfire_contactus() {
@@ -7,7 +10,7 @@ class gabfire_contactus extends WP_Widget {
 		$this->WP_Widget( 'gab_contact_widget', 'Gabfire: Contact', $widget_ops, $control_ops);	
 	}
 	
-	function widget($args, $instance) {
+	public function widget($args, $instance) {
 		extract( $args );
 		$title	= $instance['title'];
 		$d_logo	= $instance['d_logo'] ? '1' : '0';
@@ -39,7 +42,7 @@ class gabfire_contactus extends WP_Widget {
 			echo "</address>";
 			
 			
-		echo $after_widget; 
+		echo "<div class='clear'></div>$after_widget"; 
 	}
 	
 	function update($new_instance, $old_instance) {  

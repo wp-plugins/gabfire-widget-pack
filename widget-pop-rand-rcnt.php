@@ -1,4 +1,7 @@
 <?php
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
 class gab_custom_query extends WP_Widget {
  
     function gab_custom_query() {
@@ -7,7 +10,7 @@ class gab_custom_query extends WP_Widget {
         $this->WP_Widget( 'gab_custom_query', 'Gabfire: Random, Recent or Popular', $widget_ops, $control_ops);
     }
  
-    function widget($args, $instance) {      
+    public function widget($args, $instance) {      
         extract( $args );
         $title    = $instance['title'];
         $postnr    = $instance['postnr'];
@@ -75,7 +78,7 @@ class gab_custom_query extends WP_Widget {
                 </div><!-- .featuredpost -->
             <?php $count++; endwhile; wp_reset_query(); ?>
     <?php         
-        echo $after_widget; 
+        echo "<div class='clear'></div>$after_widget"; 
     }
     
     function update( $new_instance, $old_instance ) {

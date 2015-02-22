@@ -1,4 +1,7 @@
 <?php
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
 class gabfire_about extends WP_Widget {
 
 	function gabfire_about() {
@@ -7,7 +10,7 @@ class gabfire_about extends WP_Widget {
 		$this->WP_Widget( 'gab_about_widget', 'Gabfire: About', $widget_ops, $control_ops);	
 	}
 	
-	function widget($args, $instance) {
+	public function widget($args, $instance) {
 		extract( $args );
 		$title	= $instance['title'];
 		$avatar	= $instance['a_avatar'] ? '1' : '0';
@@ -37,7 +40,7 @@ class gabfire_about extends WP_Widget {
 				echo '<span class="about_more"><a href="' . get_permalink($link) . '">'. $anchor . '</a></span>';
 			}
 			
-		echo $after_widget; 
+		echo "<div class='clear'></div>$after_widget"; 
 	}
 	
 	function update($new_instance, $old_instance) {  

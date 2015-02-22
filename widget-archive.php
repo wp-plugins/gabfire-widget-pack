@@ -1,4 +1,7 @@
 <?php
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
 class gabfire_archive extends WP_Widget {
 
 	function gabfire_archive() {
@@ -7,12 +10,13 @@ class gabfire_archive extends WP_Widget {
 		$this->WP_Widget( 'gabfire_archive_widget', 'Gabfire: Archive Search', $widget_ops, $control_ops);
 	}	
 	
-	function widget( $args, $instance ) {
+	public function widget( $args, $instance ) {
 		extract( $args );
 		$title = apply_filters('widget_title', $instance['title'] );
 		$date	= $instance['date'];
-		$cat	= $instance['cat'];
 		$month	= $instance['month'];
+		$cat	= $instance['cat'];
+		$catstr	= $instance['catstr'];
 		$google	= $instance['google'];
 		$google_df	= $instance['google_df'];
 		$bgcol	= $instance['bgcol'];
@@ -33,7 +37,7 @@ class gabfire_archive extends WP_Widget {
 					
 					<form action="<?php echo esc_url( home_url( '/' ) ); ?>"  method="get" > 
 						<label><?php echo esc_attr( $cat ); ?></label>
-						<?php wp_dropdown_categories('show_option_none='. __('Select category','gabfire-widget-pack') .'&orderby=Name&hierarchical=1&nwsp_count=1'); ?>
+						<?php wp_dropdown_categories('show_option_none='. __('Click to Select','gabfire-widget-pack') .'&orderby=Name&hierarchical=1&nwsp_count=1'); ?>
 					</form>
 					
 					<script type="text/javascript"><!--
@@ -53,7 +57,7 @@ class gabfire_archive extends WP_Widget {
 					</form>		
 				</div>
 			<?php 		
-		echo $after_widget; 
+		echo "<div class='clear'></div>$after_widget"; 
 	}
 	
 	function update( $new_instance, $old_instance ) {
@@ -62,6 +66,7 @@ class gabfire_archive extends WP_Widget {
 		$instance['date'] = ( ! empty( $new_instance['date'] ) ) ? sanitize_text_field( $new_instance['date'] ) : '';
 		$instance['month'] = ( ! empty( $new_instance['month'] ) ) ? sanitize_text_field( $new_instance['month'] ) : '';
 		$instance['cat'] = ( ! empty( $new_instance['cat'] ) ) ? sanitize_text_field( $new_instance['cat'] ) : '';
+		$instance['catstr'] = ( ! empty( $new_instance['catstr'] ) ) ? sanitize_text_field( $new_instance['cat'] ) : '';
 		$instance['google'] = ( ! empty( $new_instance['google'] ) ) ? sanitize_text_field( $new_instance['google'] ) : '';
 		$instance['google_df'] = ( ! empty( $new_instance['google_df'] ) ) ? sanitize_text_field( $new_instance['google_df'] ) : '';
 		$instance['bgcol'] = ( ! empty( $new_instance['bgcol'] ) ) ? sanitize_text_field( $new_instance['bgcol'] ) : '';
@@ -71,10 +76,11 @@ class gabfire_archive extends WP_Widget {
 	function form( $instance ) {
 		$defaults = array(
 			'title' => 'Search in Archive',
-			'date' => 'Select a date',
-			'month' => 'Select month',
+			'date' => 'Select a Month',
+			'month' => 'Click to Select',
 			'bgcol' => 'transparent',
-			'cat' => 'Select a category',
+			'cat' => 'Select a Category',
+			'catstr' => 'Click to Select',
 			'google_df' => 'Write keyword and hit return',
 			'google' => 'Search with Google'
 		);
@@ -87,27 +93,32 @@ class gabfire_archive extends WP_Widget {
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('date'); ?>"><?php _e('Date search string','gabfire-widget-pack'); ?></label>
+			<label for="<?php echo $this->get_field_id('date'); ?>"><?php _e('Label for Search by Date','gabfire-widget-pack'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('date'); ?>" name="<?php echo $this->get_field_name('date'); ?>" type="text" value="<?php echo esc_attr($instance['date']); ?>" />
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('month'); ?>"><?php _e('Month selectbox label','gabfire-widget-pack'); ?></label>
+			<label for="<?php echo $this->get_field_id('month'); ?>"><?php _e('Date selectbox placeholder text','gabfire-widget-pack'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('month'); ?>" name="<?php echo $this->get_field_name('month'); ?>" type="text" value="<?php echo esc_attr($instance['month']); ?>" />
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('cat'); ?>"><?php _e('Category search string','gabfire-widget-pack'); ?></label>
+			<label for="<?php echo $this->get_field_id('cat'); ?>"><?php _e('Category selectbox placeholder text','gabfire-widget-pack'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('cat'); ?>" name="<?php echo $this->get_field_name('cat'); ?>" type="text" value="<?php echo esc_attr($instance['cat']); ?>" />
-		</p>
+		</p>		
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('google'); ?>"><?php _e('Google search string','gabfire-widget-pack'); ?></label>
+			<label for="<?php echo $this->get_field_id('catstr'); ?>"><?php _e('Category selectbox placeholder text','gabfire-widget-pack'); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id('catstr'); ?>" name="<?php echo $this->get_field_name('catstr'); ?>" type="text" value="<?php echo esc_attr($instance['catstr']); ?>" />
+		</p>		
+				
+		<p>
+			<label for="<?php echo $this->get_field_id('google'); ?>"><?php _e('Google search label','gabfire-widget-pack'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('google'); ?>" name="<?php echo $this->get_field_name('google'); ?>" type="text" value="<?php echo esc_attr($instance['google']); ?>" />
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('google_df'); ?>"><?php _e('Google field input string','gabfire-widget-pack'); ?></label>
+			<label for="<?php echo $this->get_field_id('google_df'); ?>"><?php _e('Google field input placeholder text','gabfire-widget-pack'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('google_df'); ?>" name="<?php echo $this->get_field_name('google_df'); ?>" type="text" value="<?php echo esc_attr($instance['google_df']); ?>" />
 		</p>
 		

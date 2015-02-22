@@ -1,4 +1,7 @@
 <?php
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
 class gab_social extends WP_Widget {
 
 	function gab_social() {
@@ -6,7 +9,7 @@ class gab_social extends WP_Widget {
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'gabfire_social_widget' );
 		$this->WP_Widget( 'gabfire_social_widget', 'Gabfire: Social Icons', $widget_ops, $control_ops);	
 	}
-	function widget($args, $instance) {
+	public function widget($args, $instance) {
 		extract( $args );
 		$title	= $instance['title'];
 		$fbook_l	= $instance['fbook_l'];
@@ -83,7 +86,7 @@ class gab_social extends WP_Widget {
 
 			echo '<div class="clear clearfix"></div>';
 			
-		echo $after_widget; 
+		echo "<div class='clear'></div>$after_widget"; 
 	}
 	
 	function update($new_instance, $old_instance) { 

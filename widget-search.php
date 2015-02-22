@@ -1,4 +1,7 @@
 <?php
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
 class gabfire_search extends WP_Widget {
  
 	function gabfire_search() {
@@ -7,7 +10,7 @@ class gabfire_search extends WP_Widget {
 		$this->WP_Widget( 'gabfire_search_widget', 'Gabfire: Search', $widget_ops, $control_ops);
 	}
  
-	function widget($args, $instance) {	  
+	public function widget($args, $instance) {	  
 		extract( $args );
 		$title	= $instance['title'];
 		$label	= $instance['label'];
@@ -40,7 +43,7 @@ class gabfire_search extends WP_Widget {
 					</form>
 				<?php 
 				}
-		echo $after_widget; 
+		echo "<div class='clear'></div>$after_widget"; 
 	}
 
 	function update($new_instance, $old_instance) {

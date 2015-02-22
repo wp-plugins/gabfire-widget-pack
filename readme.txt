@@ -2,8 +2,8 @@
 Contributors: gabfire, kjbenk
 Tags: twitter, twitter feed, social icons, share post, text widget, about us, author badge, ajax tabs, Feedburner email subscribe, related posts, fickr images, search, popular entries, random entries, recent entries, gabfire themes
 Requires at least: 3.8
-Tested up to: 4.0.1
-Stable tag: 1.3.18
+Tested up to: 4.1.1
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,6 +16,12 @@ The Gabfire Widget Pack is a feature-packed plugin that adds the most commonly u
 It is maintained by the folks over at http://www.gabfirethemes.com
 
 Below are the steps required to install, activate, and configure the Gabfire Widget Pack.
+
+= Widget: Video Slider =
+Get most recent videos addedto your site and display it in a widget zone with a nicely formed slider
+
+= Widget: Simple Banner =
+A very easy way to add banners into widget zones.
 
 = Widget: Recent Tweets =
 Use this widget to showcase your recent tweets from Twitter on your WordPress blog. It allows tweets by username or by hashtag.
@@ -133,6 +139,10 @@ You can install the Gabfire Widget Pack from your WordPress Dashboard or manuall
 13. Widget: Share Items
 
 == Changelog ==
+= 1.4 =
+* Video Slider Widget
+* Simple Banner
+
 = 1.3.18 =
 * Image resize via CSS for Post Tabs widget
 

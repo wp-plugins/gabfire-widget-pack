@@ -1,4 +1,7 @@
 <?php
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
 class gabfire_flickrrss extends WP_Widget {
 
 	function gabfire_flickrrss() {
@@ -7,13 +10,14 @@ class gabfire_flickrrss extends WP_Widget {
 		$this->WP_Widget( 'gabfire_flickr_widget', 'Gabfire: Flickr Images', $widget_ops, $control_ops );
 	}
 
-	function widget( $args, $instance ) {
+	public function widget( $args, $instance ) {
 		extract( $args );
 		$title 			= apply_filters('widget_title', $instance['title'] );
 		$photo_source 	= $instance['photo_source'];
 		$flickr_id 		= $instance['flickr_id'];
 		$flickr_tag 	= $instance['flickr_tag'];
 		$display 		= $instance['display'];
+		$text 			= $instance['text'];
 		$size 			= $instance['size'];
 		$photo_number 	= $instance['photo_number'];
 
@@ -22,6 +26,10 @@ class gabfire_flickrrss extends WP_Widget {
 			if ( $title ) {
 				echo $before_title . $title . $after_title;
 			}
+			
+			if ( $text ) {
+				echo wpautop($text);
+			}			
 
 			echo '
 				<script type="text/javascript" src="//www.flickr.com/badge_code_v2.gne?count='; 
@@ -50,12 +58,13 @@ class gabfire_flickrrss extends WP_Widget {
 				
 			echo '<div class="clear clearfix"></div>';
 			
-		echo $after_widget; 
+		echo "<div class='clear'></div>$after_widget"; 
 	}
 	
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		$instance['title'] 			= ( ! empty( $new_instance['title'] ) ) ? sanitize_text_field( $new_instance['title'] ) : '';
+		$instance['text'] 			= ( ! empty( $new_instance['text'] ) ) ? sanitize_text_field( $new_instance['text'] ) : '';
 		$instance['photo_source'] 	= ( ! empty( $new_instance['photo_source'] ) ) ? sanitize_text_field( $new_instance['photo_source'] ) : '';
 		$instance['flickr_id'] 		= ( ! empty( $new_instance['flickr_id'] ) ) ? sanitize_text_field( $new_instance['flickr_id'] ) : '';
 		$instance['flickr_tag'] 	= ( ! empty( $new_instance['flickr_tag'] ) ) ? sanitize_text_field( $new_instance['flickr_tag'] ) : '';
@@ -70,6 +79,7 @@ class gabfire_flickrrss extends WP_Widget {
 		$defaults = array(
 			'title' => 'Flickr Photo Stream',
 			'flickr_id' => '',
+			'text' => '',
 			'photo_source' => 'all_tag',
 			'display' => 'latest',
 			'photo_number' => '6',
@@ -88,10 +98,17 @@ class gabfire_flickrrss extends WP_Widget {
 		?>
 		
 		<div class="controlpanel">
+		
 			<p>
 				<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title','gabfire-widget-pack'); ?></label>
-				<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" class="widefat" />
+				<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" class="widefat" />
 			</p>
+			
+			<p>
+				<label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Text to display before Flickr Images','gabfire-widget-pack'); ?></label>
+				<textarea class="widefat" rows="5" cols="20" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>"><?php echo esc_attr($instance['text']); ?></textarea>
+			</p>
+				
 			
 			<p>
 				<label for="<?php echo $this->get_field_id( 'photo_source' ); ?>"><?php _e('Image Source','gabfire-widget-pack'); ?></label> 
@@ -105,14 +122,14 @@ class gabfire_flickrrss extends WP_Widget {
 			<div rel="flickr_id">
 				<p>
 					<label for="<?php echo $this->get_field_id( 'flickr_id' ); ?>"><?php _e('User or Group ID','gabfire-widget-pack'); ?> <a href="//idgettr.com/"><?php _e('Get your Flickr ID','gabfire-widget-pack'); ?></a></label>
-					<input id="<?php echo $this->get_field_id( 'flickr_id' ); ?>" name="<?php echo $this->get_field_name( 'flickr_id' ); ?>" value="<?php echo esc_attr( $instance['flickr_id'] ); ?>" class="widefat" />
+					<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'flickr_id' ); ?>" name="<?php echo $this->get_field_name( 'flickr_id' ); ?>" value="<?php echo esc_attr( $instance['flickr_id'] ); ?>" class="widefat" />
 				</p>
 			</div>
 			
 			<div rel="flickr_tag">
 				<p>
 					<label for="<?php echo $this->get_field_id( 'flickr_tag' ); ?>"><?php _e('Tags (separate with comma) (only if "All Users Photos" selected)','gabfire-widget-pack'); ?></label>
-					<input id="<?php echo $this->get_field_id( 'flickr_tag' ); ?>" name="<?php echo $this->get_field_name( 'flickr_tag' ); ?>" value="<?php echo esc_attr( $instance['flickr_tag'] ); ?>" class="widefat" />
+					<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'flickr_tag' ); ?>" name="<?php echo $this->get_field_name( 'flickr_tag' ); ?>" value="<?php echo esc_attr( $instance['flickr_tag'] ); ?>" class="widefat" />
 				</p>
 			</div>
 

@@ -1,11 +1,12 @@
 <?php
-if (!function_exists('gabfire_ajaxtabs_js')) {
-	function gabfire_ajaxtabs_js() {
-		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script('jquerytools', plugins_url() .'/gabfire-widget-pack/js/jquery.tools.min.js',array( 'jquery' ));
-	}
-	add_action( 'wp_enqueue_scripts', 'gabfire_ajaxtabs_js' );
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
+function gabfire_posttabs_scripts() {
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script('jquerytools', GABFIRE_WIDGETS_URL .'/js/jquery.tools.min.js', array( 'jquery' ));
 }
+add_action( 'wp_enqueue_scripts', 'gabfire_posttabs_scripts' );
 
 /* AJAX TABS */
 class gabfire_ajaxtabs extends WP_Widget {
@@ -16,8 +17,10 @@ class gabfire_ajaxtabs extends WP_Widget {
 		$this->WP_Widget( 'gabfire_ajaxtabs', 'Gabfire: Posts Tabs Widget', $widget_ops, $control_ops);
 	}
 
-	function widget($args, $instance) {
+	public function widget($args, $instance) {
 
+
+	
 		global $post;
 
 		extract( $args );
@@ -156,11 +159,13 @@ class gabfire_ajaxtabs extends WP_Widget {
 					</div>
 					<?php } ?>
 				</div>
+				
+				<div class="clear"></div>
 			</div>
 
 			<?php
 
-		echo $after_widget;
+		echo "<div class='clear'></div>$after_widget";
 	}
 
 	function update($new_instance, $old_instance) {

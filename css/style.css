@@ -19,9 +19,9 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
     display: inline;
 }
 
-.news-signup {background:url(images/newsletter.jpg) top center;padding:20px;text-align:center}
+.news-signup {background:url('../images/newsletter.jpg') top center;padding:20px;text-align:center}
 .news-signup .widgettitle {color:#fff;font-size:25px;font-weight:700}
-.news-signup .sidebar_feedwidget {width:253px;height:46px;background:url(images/submit-newsletter.png);padding:4px;margin:0 auto;}
+.news-signup .sidebar_feedwidget {width:253px;height:46px;background:url('../images/submit-newsletter.png');padding:4px;margin:0 auto;}
 .news-signup .sidebar_mailinput {width:206px;height:38px;border:none;padding:0 0 0 5px;float:left;font-size:14px;color:#888}
 .news-signup .sidebar_mailinput_submit {float: right;display: inline;}
 .news-signup p {margin-top:15px;color:#fff;margin-bottom:0;}
@@ -89,10 +89,11 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
     height: 31px;
     font-weight: bold;
     text-align: center;
-    padding: 2px 0 0 0;
+    padding: 0;
     position: relative;
     top: -1px!important;
     text-decoration: none;
+	font-size:12px
 }
 
 .tab_titles a:active {
@@ -105,10 +106,11 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
     cursor: default !important;
     outline: none;
     text-decoration: none;
+	padding-top:2px;
 }
 
 .panes div {
-    padding: 15px 10px 15px 10px !important;
+    padding: 15px 10px 7px 10px !important;
 }
 
 .panes div div {
@@ -171,6 +173,8 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
 #light_colorscheme .tab_titles {
     border-bottom: 1px solid #cfcfcf;
     margin: 0;
+	float:left;
+	width:100%;
 }
 
 #light_colorscheme .tab_titles a {
@@ -193,12 +197,15 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
     background-color: #fff!important;
     border: 1px solid #cfcfcf !important;
     border-top: none!important;
+	float:left;
+	width:100%;
 }
 
 #light_colorscheme .panes li {
     background: none;
     border-bottom: 1px dotted #ddd !important;
     padding-left: 0;
+	width:100%
 }
 
 #light_colorscheme .panes li  a {
@@ -254,6 +261,11 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
 .no-list-image {
     background: none !important;
     padding-left: 0 !important;
+}
+#light_colorscheme .panes li:last-child,
+#dark_colorscheme .panes li:last-child {
+    border-bottom:0 !important;
+	margin-bottom:0 !important;
 }
 
 @media (max-width: 767px) {
@@ -365,7 +377,7 @@ form.gabfire_search_style2 .gab_search_text {
     width: 225px;
     margin: 5px 40px 0 5px;
     color: #7c7a7a;
-    font: 13px arial, verdana, sans-serif;
+    font: 13px/23px arial, verdana, sans-serif;
 }
 
 form.gabfire_search_style2 .submit_style2 {
@@ -644,19 +656,16 @@ form.gabfire_search_style2 input ,form.gabfire_search_style2 input:hover, form.g
 
 /*----- [[ Author Badge Widget ]] -----*/
 .gabfire_authorbadge {
-    padding: 5px 14px 5px 14px;
+    padding: 15px;
     background: #f5f6f7;
-    margin: 0;
     border: 1px solid #ddd;
     overflow: hidden;
 }
-
 .gabfire_authorbadge img {
     float: left;
     margin: 3px 7px 4px 0 !important;
     color: #666;
 }
-
 .gabfire_authorbadge .author_social {
     display: list-item;
     margin: 0 0 7px;
@@ -667,32 +676,29 @@ form.gabfire_search_style2 input ,form.gabfire_search_style2 input:hover, form.g
     border-bottom: 1px dotted #ddd;
     text-decoration: none;
 }
-
 .gabfire_authorbadge .t_link {
     background: url('images/ico/ico_twitter.png') no-repeat 2px 3px;
 }
-
 .gabfire_authorbadge .f_link {
     background: url('images/ico/ico_facebook.png') no-repeat 2px 3px;
 }
-
 .gabfire_authorbadge .g_link {
     background: url('images/ico/ico_gplus.png') no-repeat 2px 3px;
 }
-
 .gabfire_authorbadge .w_link {
     background: url('images/ico/ico_home.png') no-repeat 2px 3px;
 }
-
 .gabfire_authorbadge .a_link {
     background: url('images/ico/ico_all.png') no-repeat 2px 3px;
 }
-
 .gabfire_authorbadge p {
     overflow: hidden;
     margin-bottom: 15px !important;
 }
-
+.gabfire_authorbadge p.first_p {
+	margin-bottom:5px !important;
+	font-weight:bold;
+}
 .gabfire_authorbadge .widget-innertitle {
     font-size: 15px;
     line-height: 19px;
@@ -701,7 +707,6 @@ form.gabfire_search_style2 input ,form.gabfire_search_style2 input:hover, form.g
     letter-spacing: 0;
     color: #333;
 }
-
 .gabfire_authorbadge ul li {
     border-bottom: 1px dotted #ddd;
     margin-bottom: 5px;
@@ -757,5 +762,51 @@ form.gabfire_search_style2 input ,form.gabfire_search_style2 input:hover, form.g
 
 /*----- [[ Contact Us ]] -----*/
 .gabfire-tweets {}
-.gabfire-tweets  li{overflow:hidden;margin-left:0 !important}
+.gabfire-tweets  li{overflow:hidden;margin-left:0 !important;width:100%;}
 .gabfire-tweets img {width:40px}
+
+.gabfire_unslider {
+	position: relative;
+	overflow: auto;
+}
+		
+/*----- [[ Unslider Video Slides ]] -----*/
+	.gabfire-videos-wrapper {position:relative;}
+	.gabfire-videos {padding-top:25px;} 
+	.gabfire-videos iframe {width:100%;}
+	.gabfire-videos img {width:100%}
+	.gabfire-videos .owl-pagination {
+		position:absolute;
+		left:0px;
+		top:0px;
+		transition: opacity .25s ease-in-out;
+		-moz-transition: opacity .25s ease-in-out;
+		-webkit-transition: opacity .25s ease-in-out		
+	}
+	.gabfire-videos.owl-theme .owl-controls .owl-page span {width:10px;height:10px;background:#bbb;margin:0 6px 0 0;text-align:left;}
+	.gabfire-videos-controls {
+		position:absolute;
+		width:32px;
+		z-index:1;
+		right:0px;
+		top:0px;
+		height:14px;
+		margin-top:3px;
+	}
+	.gabfire-videos-controls span {background:url('../images/arrow-16.png');height:14px;width:14px;cursor:pointer;opacity:0.7;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out}
+	.gabfire-videos-controls span:hover {opacity:1}
+	.gabfire-videos-controls span.gabfire-videos-prev {background-position:left}
+	.gabfire-videos-controls span.gabfire-videos-next {background-position:right}
+	.owl-controls.clickable {margin:0}
+	.innerslider-wrapper:hover .gabfire-videos .owl-pagination{
+		display:block;
+		opacity:1;
+		-webkit-animation: fadeIn 1s; /* Safari, Chrome and Opera > 12.1 */
+		 -moz-animation: fadeIn 1s; /* Firefox < 16 */
+			-ms-animation: fadeIn 1s; /* Internet Explorer */
+			 -o-animation: fadeIn 1s; /* Opera < 12.1 */
+				animation: fadeIn 1s;	
+	}

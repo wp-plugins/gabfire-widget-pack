@@ -1,4 +1,7 @@
 <?php
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
 function gabfire_widgetpack_loc() {
 	load_plugin_textdomain('gabfire-widget-pack', false, dirname(plugin_basename(__FILE__)) . '/lang/');
 }
@@ -38,20 +41,23 @@ function gab_delete_plugin_options() {
 // Define default option settings
 function gab_add_defaults() {
 		delete_option('gab_options');
-		$arr = array(	"about_widget" => "1",
-						"social" => "1",
-						"share" => "1",
-						"search" => "1",
-						"relatedposts" => "1",
-						"text_widget" => "1",
-						"text_widget2" => "1",
-						"tweet_widget" => "1",
-						"ajaxtabs" => "1",
-						"archive_widget" => "1",
-						"authorbadge" => "1",
-						"feedburner" => "1",
-						"flickrrss" => "1",
-						"contact_info" => "1"
+		$arr = array(	
+			"videos" =>			"1",
+			"about_widget" => 	"1",
+			"social" =>			"1",
+			"share" =>			"1",
+			"search" =>			"1",
+			"relatedposts" =>	"1",
+			"text_widget" =>	"1",
+			"text_widget2" =>	"1",
+			"tweet_widget" =>	"1",
+			"ajaxtabs" =>		"1",
+			"archive_widget" => "1",
+			"authorbadge" =>	"1",
+			"feedburner" =>		"1",
+			"flickrrss" =>		"1",
+			"simple_ad"	 => 	"1",
+			"contact_info" => 	"1"
 		);
 		update_option('gab_options', $arr);
 }
@@ -171,7 +177,7 @@ $('#textbox1').val($(this).is(':checked'));
 				<h3><span>Support</span></h3>
 				<div class="inside">
 					<ul>
-						<li><a href="http://www.gabfirethemes.com/codex" target="_blank">Gabfire Codex</a></li>
+						<li><a href="http://codex.gabfire.com" target="_blank">Gabfire Codex</a></li>
 						<li><a href="http://forums.gabfire.com/" target="_blank">Support Forums</a></li>
 						<li><a href="http://www.gabfirethemes.com/faq/" target="_blank">Frequently Asked Questions</a></li>
 						<li><a href="http://www.gabfirethemes.com/blog/" target="_blank">Latest News</a></li>
@@ -298,6 +304,26 @@ $('#textbox1').val($(this).is(':checked'));
 										<p><?php _e('Gabfire Random/Popular/Recent Posts: Display random, recent or most popular posts.','gabfire-widget-pack'); ?></p>
 									</div><!-- .gab_option_box_inner -->
 								</div>
+								
+								<?php if(isset($options['videos']) && $options['videos'] == 1) { $state = "active"; } else { $state = "deactive"; } ?>
+								<div class="gab_options_videos gab_option_box <?php echo $state; ?>">
+									<div class="gab_option_box_inner">
+										<h3><?php _e('Recent Videos','gabfire-widget-pack'); ?></h3>
+
+										<label class="widget_trigger">
+											<input  type="checkbox" class="gabfire_checkbox" id="gab_options_videos" name="gab_options[videos]" value="1" <?php if (isset($options['videos'])) { checked('1', $options['videos']); } ?> />
+											<span class="gab_switcher">
+												<span class="gab_switcheron"><?php _e('ON','gabfire-widget-pack'); ?></span>
+												<span class="gab_switcheroff"><?php _e('OFF','gabfire-widget-pack'); ?></span>
+												<span class="gab_switcherblock"></span>
+											</span>
+										</label>
+										<p><?php
+										$gabfire_mediaplugin = '<a href="https://wordpress.org/plugins/gabfire-media-module/">Gabfire Media Module</a>';
+										printf(esc_attr__('Display recent videos. This widget requires a Gabfire Theme or %1$s plugin to be installed and activated.','gabfire-widget-pack'), $gabfire_mediaplugin);
+										?></p>
+									</div><!-- .gab_option_box_inner -->
+								</div>								
 
 							</div><!-- .gabfire-col-left -->
 
@@ -422,6 +448,25 @@ $('#textbox1').val($(this).is(':checked'));
 									</div><!-- .gab_option_box_inner -->
 								</div>
 
+								<?php if(isset($options['simple_ad']) && $options['simple_ad'] == 1) { $state = "active"; } else { $state = "deactive"; } ?>
+								<div class="gab_options_videos gab_option_box <?php echo $state; ?>">
+									<div class="gab_option_box_inner">
+										<h3><?php _e('Simple Banner','gabfire-widget-pack'); ?></h3>
+
+										<label class="widget_trigger">
+											<input  type="checkbox" class="gabfire_checkbox" id="gab_options_videos" name="gab_options[simple_ad]" value="1" <?php if (isset($options['simple_ad'])) { checked('1', $options['simple_ad']); } ?> />
+											<span class="gab_switcher">
+												<span class="gab_switcheron"><?php _e('ON','gabfire-widget-pack'); ?></span>
+												<span class="gab_switcheroff"><?php _e('OFF','gabfire-widget-pack'); ?></span>
+												<span class="gab_switcherblock"></span>
+											</span>
+										</label>
+										<p><?php
+										printf(esc_attr__('With this widget, you can display any ad on widget zones.','gabfire-widget-pack'), $gabfire_mediaplugin);
+										?></p>
+									</div><!-- .gab_option_box_inner -->
+								</div>										
+								
 							</div><!-- .gabfire-col-right -->
 
 							<div class="clearfix"></div>
