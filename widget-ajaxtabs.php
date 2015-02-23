@@ -18,8 +18,6 @@ class gabfire_ajaxtabs extends WP_Widget {
 
 	public function widget($args, $instance) {
 
-
-	
 		global $post;
 
 		extract( $args );
