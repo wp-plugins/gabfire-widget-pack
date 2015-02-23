@@ -4,7 +4,6 @@
     border: 1px solid #ddd;
     padding: 3px 0 3px 5px;
 }
-
 form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_widget input:active, form.gabfire_f_widget input:focus {
     box-shadow: none;
     outline: 0px !important;
@@ -12,7 +11,6 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
     margin: 0;
     border: none;
 }
-
 .gabfire_feedburner_widget .feedburner_submit {
     float: right;
     padding: 5px 7px 0 0;
