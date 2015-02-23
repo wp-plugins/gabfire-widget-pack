@@ -89,11 +89,10 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
     height: 31px;
     font-weight: bold;
     text-align: center;
-    padding: 0;
+    padding: 2px 0 0 0;
     position: relative;
     top: -1px!important;
     text-decoration: none;
-	font-size:12px
 }
 
 .tab_titles a:active {
@@ -106,11 +105,10 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
     cursor: default !important;
     outline: none;
     text-decoration: none;
-	padding-top:2px;
 }
 
 .panes div {
-    padding: 15px 10px 7px 10px !important;
+    padding: 15px 10px 15px 10px !important;
 }
 
 .panes div div {
@@ -159,7 +157,6 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
 
 .panes .wp-post-image {
     width: 35px;
-	height: 35px;
     line-height: 0;
     margin: 2px 0 0 7px;
     float: right;
@@ -173,8 +170,6 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
 #light_colorscheme .tab_titles {
     border-bottom: 1px solid #cfcfcf;
     margin: 0;
-	float:left;
-	width:100%;
 }
 
 #light_colorscheme .tab_titles a {
@@ -197,7 +192,6 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
     background-color: #fff!important;
     border: 1px solid #cfcfcf !important;
     border-top: none!important;
-	float:left;
 }
 
 #light_colorscheme .panes li {
@@ -392,67 +386,67 @@ form.gabfire_search_style2 input ,form.gabfire_search_style2 input:hover, form.g
 }
 
 .gabfire_social_widget a.facebook {
-    background: url('images/social/facebook.png');
+    background: url('../images/social/facebook.png');
 }
 
 .gabfire_social_widget a.twitter {
-    background: url('images/social/twitter.png');
+    background: url('../images/social/twitter.png');
 }
 
 .gabfire_social_widget a.feed {
-    background: url('images/social/feed.png');
+    background: url('../images/social/feed.png');
 }
 
 .gabfire_social_widget a.instagram {
-    background: url('images/social/instagram.png');
+    background: url('../images/social/instagram.png');
 }
 
 .gabfire_social_widget a.plus1 {
-    background: url('images/social/plus1.png');
+    background: url('../images/social/plus1.png');
 }
 
 .gabfire_social_widget a.picasa {
-    background: url('images/social/picasa.png');
+    background: url('../images/social/picasa.png');
 }
 
 .gabfire_social_widget a.flickr {
-    background: url('images/social/flickr.png');
+    background: url('../images/social/flickr.png');
 }
 
 .gabfire_social_widget a.lastfm {
-    background: url('images/social/lastfm.png');
+    background: url('../images/social/lastfm.png');
 }
 
 .gabfire_social_widget a.linkedin {
-    background: url('images/social/linkedin.png');
+    background: url('../images/social/linkedin.png');
 }
 
 .gabfire_social_widget a.youtube {
-    background: url('images/social/youtube.png');
+    background: url('../images/social/youtube.png');
 }
 
 .gabfire_social_widget a.vimeo {
-    background: url('images/social/vimeo.png');
+    background: url('../images/social/vimeo.png');
 }
 
 .gabfire_social_widget a.delicious {
-    background: url('images/social/delicious.png');
+    background: url('../images/social/delicious.png');
 }
 
 .gabfire_social_widget a.stumbleupon {
-    background: url('images/social/stumbleupon.png');
+    background: url('../images/social/stumbleupon.png');
 }
 
 .gabfire_social_widget a.deviantart {
-    background: url('images/social/deviantart.png');
+    background: url('../images/social/deviantart.png');
 }
 
 .gabfire_social_widget a.digg {
-    background: url('images/social/digg.png');
+    background: url('../images/social/digg.png');
 }
 
 .gabfire_social_widget a.foursquare {
-    background: url('images/social/foursquare.png');
+    background: url('../images/social/foursquare.png');
 }
 
 .gabfire_social_widget a:link {
@@ -579,59 +573,59 @@ form.gabfire_search_style2 input ,form.gabfire_search_style2 input:hover, form.g
 }
 
 .gabfire_share_widget a.facebook {
-    background: url('images/share/facebook.png');
+    background: url('../images/share/facebook.png');
 }
 
 .gabfire_share_widget a.plus1 {
-    background: url('images/share/plus1.png');
+    background: url('../images/share/plus1.png');
 }
 
 .gabfire_share_widget a.twitter {
-    background: url('images/share/twitter.png');
+    background: url('../images/share/twitter.png');
 }
 
 .gabfire_share_widget a.email {
-    background: url('images/share/email.png');
+    background: url('../images/share/email.png');
 }
 
 .gabfire_share_widget a.delicious {
-    background: url('images/share/delicious.png');
+    background: url('../images/share/delicious.png');
 }
 
 .gabfire_share_widget a.digg {
-    background: url('images/share/digg.png');
+    background: url('../images/share/digg.png');
 }
 
 .gabfire_share_widget a.google2 {
-    background: url('images/share/google.png');
+    background: url('../images/share/google.png');
 }
 
 .gabfire_share_widget a.stumbleupon {
-    background: url('images/share/stumbleupon.png');
+    background: url('../images/share/stumbleupon.png');
 }
 
 .gabfire_share_widget a.reddit {
-    background: url('images/share/reddit.png');
+    background: url('../images/share/reddit.png');
 }
 
 .gabfire_share_widget a.technorati {
-    background: url('images/share/technorati.png');
+    background: url('../images/share/technorati.png');
 }
 
 .gabfire_share_widget a.yahoo {
-    background: url('images/share/yahoo.png');
+    background: url('../images/share/yahoo.png');
 }
 
 .gabfire_share_widget a.blogger {
-    background: url('images/share/blogger.png');
+    background: url('../images/share/blogger.png');
 }
 
 .gabfire_share_widget a.myspace {
-    background: url('images/share/myspace.png');
+    background: url('../images/share/myspace.png');
 }
 
 .gabfire_share_widget a.rss {
-    background: url('images/share/rss.png');
+    background: url('../images/share/rss.png');
 }
 
 .gabfire_share_widget a:link {
@@ -665,19 +659,19 @@ form.gabfire_search_style2 input ,form.gabfire_search_style2 input:hover, form.g
     text-decoration: none;
 }
 .gabfire_authorbadge .t_link {
-    background: url('images/ico/ico_twitter.png') no-repeat 2px 3px;
+    background: url('../images/ico/ico_twitter.png') no-repeat 2px 3px;
 }
 .gabfire_authorbadge .f_link {
-    background: url('images/ico/ico_facebook.png') no-repeat 2px 3px;
+    background: url('../images/ico/ico_facebook.png') no-repeat 2px 3px;
 }
 .gabfire_authorbadge .g_link {
-    background: url('images/ico/ico_gplus.png') no-repeat 2px 3px;
+    background: url('../images/ico/ico_gplus.png') no-repeat 2px 3px;
 }
 .gabfire_authorbadge .w_link {
-    background: url('images/ico/ico_home.png') no-repeat 2px 3px;
+    background: url('../images/ico/ico_home.png') no-repeat 2px 3px;
 }
 .gabfire_authorbadge .a_link {
-    background: url('images/ico/ico_all.png') no-repeat 2px 3px;
+    background: url('../images/ico/ico_all.png') no-repeat 2px 3px;
 }
 .gabfire_authorbadge p {
     overflow: hidden;
