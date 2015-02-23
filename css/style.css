@@ -198,7 +198,6 @@ form.gabfire_f_widget input, form.gabfire_f_widget input:hover, form.gabfire_f_w
     border: 1px solid #cfcfcf !important;
     border-top: none!important;
 	float:left;
-	width:100%;
 }
 
 #light_colorscheme .panes li {
