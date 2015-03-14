@@ -14,7 +14,7 @@ class gabfire_videos extends WP_Widget {
 	function gabfire_videos() {
 		$widget_ops = array( 'classname' => 'gabfire-videos-widget', 'description' => 'Get the videos added via Custom Fields' );
 		$control_ops = array( 'width' => 400, 'height' => 350, 'id_base' => 'gabfire-videos-widget' );
-		$this->WP_Widget( 'gabfire_videos', 'Gabfire: Videos', $widget_ops, $control_ops);	
+		$this->WP_Widget( 'gabfire-videos-widget', 'Gabfire: Videos', $widget_ops, $control_ops);	
 	}
 	
 	public function widget($args, $instance) {
@@ -85,12 +85,12 @@ class gabfire_videos extends WP_Widget {
 		$instance['video_height'] 	= (int) $new_instance['video_height'];
 		$instance['title_font_size'] 	= sanitize_text_field($new_instance['title_font_size']);
 		$instance['title_font_family'] 	=  sanitize_text_field($new_instance['title_font_family']);
-		$instance['title_font_family'] 	=  sanitize_text_field($new_instance['title_font_weight']);
+		$instance['title_font_weight'] 	=  sanitize_text_field($new_instance['title_font_weight']);
 		return $new_instance;
 	}
   
 	function form($instance) {
-		$defaults	= array( 'title' => '', 'video_nr' => '5', 'video_width' => '300', 'video_height' => '225', 'title_font_size' => '17px','title_font_family' => 'Georgia, Times, \'Times New Roman\', serif', 'title_font_weight' => 'bold');
+		$defaults	= array( 'title' => '', 'video_nr' => '5', 'video_width' => '300', 'video_height' => '225', 'title_font_weight' => 'Normal', 'title_font_size' => '17px','title_font_family' => 'Georgia, Times, \'Times New Roman\', serif', 'title_font_weight' => 'bold');
 		$instance = wp_parse_args( (array) $instance, $defaults ); 
 	?>
 
@@ -120,7 +120,7 @@ class gabfire_videos extends WP_Widget {
 	</p>	
 	
 	<p>
-		<select id="<?php echo $this->get_field_id( 'title_font_weight' ); ?>" name="<?php echo $this->get_field_name( 'boxg1' ); ?>">
+		<select id="<?php echo $this->get_field_id( 'title_font_weight' ); ?>" name="<?php echo $this->get_field_name( 'title_font_weight' ); ?>">
 			<option value="bold" <?php selected( $instance['title_font_weight'], 'bold' ); ?>><?php _e('Bold','gabfire-widget-pack'); ?></option>
 			<option value="normal" <?php selected( $instance['title_font_weight'], 'normal' ); ?>><?php _e('Normal','gabfire-widget-pack'); ?></option>
 		</select>
