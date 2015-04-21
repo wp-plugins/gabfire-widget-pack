@@ -4,7 +4,7 @@
 	Plugin URI: http://www.gabfirethemes.com
 	Description: This plugin adds a bundle of the most commonly used widgets to your site.
 	Author: Gabfire Themes
-	Version: 1.4.4
+	Version: 1.4.3
 	Author URI: http://www.gabfirethemes.com
 
     Copyright 2013 Gabfire Themes (email : info@gabfire.com)
@@ -26,7 +26,7 @@
 
 /* Load options panel and define Constants
  ***********************************************************************************/
-	define( 'GABFIRE_WIDGETS_VERSION', '1.4.4');
+	define( 'GABFIRE_WIDGETS_VERSION', '1.4.3');
 	define( 'GABFIRE_WIDGETS_DIR', dirname(__FILE__) );
 	define( 'GABFIRE_WIDGETS_URL', plugins_url().'/gabfire-widget-pack' );
 
@@ -80,9 +80,6 @@
 
 /* Also make sure each index exists before comparing it
  ***********************************************************************************/
- 	if (isset($gabfire_options['about_widget']) && $gabfire_options['about_widget'] == 1) {
-		require_once (GABFIRE_WIDGETS_DIR . '/widget-about.php');
-	}  
  
 	if (isset($gabfire_options['videos']) && $gabfire_options['videos'] == 1) {
 		require_once (GABFIRE_WIDGETS_DIR . '/widget-videos.php');
