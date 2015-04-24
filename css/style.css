@@ -321,7 +321,7 @@ form.gabfire_search_style1 {
 }
 
 form.gabfire_search_style1 fieldset {
-    padding: 0;
+    padding: 4px;
 }
 
 form.gabfire_search_style1 .gab_search_text {
@@ -333,8 +333,13 @@ form.gabfire_search_style1 .gab_search_text {
 
 form.gabfire_search_style1 .submit_style1 {
     float: right;
+	border:none;
+	text-indent:-999em;
     padding: 6px 5px 0 0;
     display: inline;
+	width:16px;
+	height:16px;
+	background:url(../images/search.png)
 }
 
 form.gabfire_search_style2 fieldset {
@@ -763,7 +768,7 @@ form.gabfire_search_style2 input ,form.gabfire_search_style2 input:hover, form.g
 		-moz-transition: opacity .25s ease-in-out;
 		-webkit-transition: opacity .25s ease-in-out		
 	}
-	.gabfire-videos.owl-theme .owl-controls .owl-page span {width:10px;height:10px;background:#bbb;margin:0 6px 0 0;text-align:left;}
+	.gabfire-videos.owl-theme .owl-controls .owl-page span {width:10px;height:10px;background:#bbb;margin:0 6px 0 0;text-align:left;border-radius:50% !important;-moz-border-radius:50% !important;-webkit-border-radius:50% !important;}
 	.gabfire-videos-controls {
 		position:absolute;
 		width:32px;
