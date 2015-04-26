@@ -23,7 +23,7 @@ class gabfire_search extends WP_Widget {
 					echo $before_title . $title . $after_title;
 				}
 			
-				if($s_style == 1) {
+				if($s_style == 1) { 
 				
 				?>
 					<form class="gabfire_search_style1" action="<?php echo esc_url( home_url( '/' ) ); ?>">
