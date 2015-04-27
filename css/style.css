@@ -334,6 +334,7 @@ form.gabfire_search_style1 .gab_search_text {
 form.gabfire_search_style1 .submit_style1 {
     float: right;
 	border:none;
+	cursor:pointer;
 	text-indent:-999em;
     padding: 6px 5px 0 0;
     display: inline;
