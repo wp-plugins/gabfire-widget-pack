@@ -3,7 +3,7 @@ Contributors: gabfire, kjbenk
 Tags: twitter, twitter feed, social icons, share post, text widget, about us, author badge, ajax tabs, Feedburner email subscribe, related posts, fickr images, search, popular entries, random entries, recent entries, gabfire themes
 Requires at least: 3.8
 Tested up to: 4.2.1
-Stable tag: 1.4.6
+Stable tag: 1.4.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -139,6 +139,15 @@ You can install the Gabfire Widget Pack from your WordPress Dashboard or manuall
 13. Widget: Share Items
 
 == Changelog ==
+= 1.4.7 = 
+* Remove gab_postmeta function
+
+= 1.4.6 = 
+* Add About Us Widget
+
+= 1.4.5 = 
+* Add missing images for Text+ Widget
+
 = 1.4.4 = 
 * Fix search results pagination - search widget
 

@@ -71,7 +71,12 @@ class gab_custom_query extends WP_Widget {
 						</h2>
 					<?php
                     if ( $postmeta ) {
-                        gab_postmeta(); 
+						$author_id=$post->post_author;
+						echo '<span class="gabfire_meta gabfiremeta_bydate">';
+						$authorlink = '<span class="author vcard" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><a href="'.get_author_posts_url($post->post_author).'" rel="author" class="fn" itemprop="name">'.  get_the_author_meta( 'display_name', $post->post_author ) . '</a></span>';
+						$date = '<time class="published updated" itemprop="datePublished" datetime="'. get_the_date() . 'T' . get_the_time() .'">'. get_the_date() . '</time>';
+						printf(esc_attr__('By %1$s on %2$s','gabfire'), $authorlink, $date);
+						echo '</span>';
                     } ?>
                     
                 </div><!-- .featuredpost -->
