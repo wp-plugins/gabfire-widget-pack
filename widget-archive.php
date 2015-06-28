@@ -15,7 +15,6 @@ class gabfire_archive extends WP_Widget {
 		$date	= $instance['date'];
 		$month	= $instance['month'];
 		$cat	= $instance['cat'];
-		$catstr	= $instance['catstr'];
 		$google	= $instance['google'];
 		$google_df	= $instance['google_df'];
 		$bgcol	= $instance['bgcol'];
@@ -65,7 +64,6 @@ class gabfire_archive extends WP_Widget {
 		$instance['date'] = ( ! empty( $new_instance['date'] ) ) ? sanitize_text_field( $new_instance['date'] ) : '';
 		$instance['month'] = ( ! empty( $new_instance['month'] ) ) ? sanitize_text_field( $new_instance['month'] ) : '';
 		$instance['cat'] = ( ! empty( $new_instance['cat'] ) ) ? sanitize_text_field( $new_instance['cat'] ) : '';
-		$instance['catstr'] = ( ! empty( $new_instance['catstr'] ) ) ? sanitize_text_field( $new_instance['cat'] ) : '';
 		$instance['google'] = ( ! empty( $new_instance['google'] ) ) ? sanitize_text_field( $new_instance['google'] ) : '';
 		$instance['google_df'] = ( ! empty( $new_instance['google_df'] ) ) ? sanitize_text_field( $new_instance['google_df'] ) : '';
 		$instance['bgcol'] = ( ! empty( $new_instance['bgcol'] ) ) ? sanitize_text_field( $new_instance['bgcol'] ) : '';
@@ -79,7 +77,6 @@ class gabfire_archive extends WP_Widget {
 			'month' => 'Click to Select',
 			'bgcol' => 'transparent',
 			'cat' => 'Select a Category',
-			'catstr' => 'Click to Select',
 			'google_df' => 'Write keyword and hit return',
 			'google' => 'Search with Google'
 		);
@@ -106,11 +103,6 @@ class gabfire_archive extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id('cat'); ?>" name="<?php echo $this->get_field_name('cat'); ?>" type="text" value="<?php echo esc_attr($instance['cat']); ?>" />
 		</p>		
 		
-		<p>
-			<label for="<?php echo $this->get_field_id('catstr'); ?>"><?php _e('Category selectbox placeholder text','gabfire-widget-pack'); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id('catstr'); ?>" name="<?php echo $this->get_field_name('catstr'); ?>" type="text" value="<?php echo esc_attr($instance['catstr']); ?>" />
-		</p>		
-				
 		<p>
 			<label for="<?php echo $this->get_field_id('google'); ?>"><?php _e('Google search label','gabfire-widget-pack'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('google'); ?>" name="<?php echo $this->get_field_name('google'); ?>" type="text" value="<?php echo esc_attr($instance['google']); ?>" />
