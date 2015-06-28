@@ -36,8 +36,16 @@
 
 /* Setup Style and Textdomain
  ***********************************************************************************/
-	wp_enqueue_style('gabfire-widget-css', GABFIRE_WIDGETS_URL .'/css/style.css');
-	load_plugin_textdomain('gabfire-widget-pack', false, GABFIRE_WIDGETS_DIR . '/lang');
+	function gabfire_widgetpack_lang() {
+		load_plugin_textdomain('gabfire-widget-pack', false, GABFIRE_WIDGETS_DIR . '/lang');
+	}
+	add_action( 'after_setup_theme', 'gabfire_widgetpack_lang' );
+ 
+	function gabfire_widgetpack_style() {
+		wp_enqueue_style('gabfire-widget-css', GABFIRE_WIDGETS_URL .'/css/style.css');
+	}
+	add_action( 'wp_enqueue_scripts', 'gabfire_widgetpack_style' );
+	
 	
 /* Load style file for wp-admin/widgets.php
  ***********************************************************************************/
