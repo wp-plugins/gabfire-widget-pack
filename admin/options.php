@@ -164,7 +164,7 @@ $('#textbox1').val($(this).is(':checked'));
 				<div class="inside">
 					<ul>
 						<li><a href="http://www.gabfirethemes.com/feed/" target="_blank">Subscribe to RSS</a></li>
-						<li><a href="http://eepurl.com/dknlQ" target="_blank">Subscribe to Newsletters</a></li>
+						<li><a href="https://my.sendinblue.com/users/subscribe/js_id/1zcew/id/1" target="_blank">Subscribe to Newsletters</a></li>
 						<li><a href="http://www.twitter.com/gabfirethemes" target="_blank">Follow on Twitter</a></li>
 						<li><a href="http://www.facebook.com/pages/Gabfire-Premium-Themes/330773148827" target="_blank">Friend Us on Facebook</a></li>
 						<li><a href="https://plus.google.com/106104916131754615481" target="_blank">Circle on Google+</a></li>
@@ -324,6 +324,23 @@ $('#textbox1').val($(this).is(':checked'));
 									</div><!-- .gab_option_box_inner -->
 								</div>								
 
+								<?php if(isset($options['instagram']) && $options['instagram'] == 1) { $state = "active"; } else { $state = "deactive"; } ?>
+								<div class="gab_options_flickrrss gab_option_box <?php echo $state; ?>">
+									<div class="gab_option_box_inner">
+										<h3><?php _e('Instagram Photos','gabfire-widget-pack'); ?></h3>
+
+										<label class="widget_trigger">
+											<input  type="checkbox" class="gabfire_checkbox" id="gab_options_instagram" name="gab_options[instagram]" value="1" <?php if (isset($options['instagram'])) { checked('1', $options['instagram']); } ?> />
+											<span class="gab_switcher">
+												<span class="gab_switcheron"><?php _e('ON','gabfire-widget-pack'); ?></span>
+												<span class="gab_switcheroff"><?php _e('OFF','gabfire-widget-pack'); ?></span>
+												<span class="gab_switcherblock"></span>
+											</span>
+										</label>
+										<p><?php _e('Instagram photo stream widget.','gabfire-widget-pack'); ?></p>
+									</div><!-- .gab_option_box_inner -->
+								</div>								
+								
 							</div><!-- .gabfire-col-left -->
 
 							<div class="gabfire-col-right">

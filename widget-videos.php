@@ -1,14 +1,6 @@
 <?php
 if ( !defined('ABSPATH')) exit;
 
-function gabfire_videos_scripts() {
-	wp_enqueue_script( 'jquery' );
-	wp_enqueue_style('owl-carousel', GABFIRE_WIDGETS_URL .'/css/owl.carousel.css');
-	wp_enqueue_script('owl-carousel', GABFIRE_WIDGETS_URL .'/js/owl.carousel.min.js');
-	wp_enqueue_script('owl-carousel-init', GABFIRE_WIDGETS_URL .'/js/owl.carousel.init.js');
-}
-add_action( 'wp_enqueue_scripts', 'gabfire_videos_scripts' );	
-
 class gabfire_videos extends WP_Widget {
 	
 	function gabfire_videos() {
@@ -18,6 +10,11 @@ class gabfire_videos extends WP_Widget {
 	}
 	
 	public function widget($args, $instance) {
+		
+		wp_enqueue_script( 'jquery' );
+		wp_enqueue_style('owl-carousel', GABFIRE_WIDGETS_URL .'/css/owl.carousel.css');
+		wp_enqueue_script('owl-carousel', GABFIRE_WIDGETS_URL .'/js/owl.carousel.min.js');
+		wp_enqueue_script('owl-carousel-init', GABFIRE_WIDGETS_URL .'/js/owl.carousel.init.js');
 		
 		extract( $args );
 		$title      = $instance['title'];		

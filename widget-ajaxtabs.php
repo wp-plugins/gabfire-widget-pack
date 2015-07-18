@@ -58,7 +58,7 @@ class gabfire_ajaxtabs extends WP_Widget {
 						<ul>
 							<?php
 							$count = 1;
-							$args = array( 'posts_per_page'=> $post_nr, );
+							$args = array( 'posts_per_page'=> $post_nr, 'ignore_sticky_posts' => 1 );
 							$gab_query = new WP_Query();$gab_query->query($args);
 							while ($gab_query->have_posts()) : $gab_query->the_post();
 							?>
@@ -98,7 +98,7 @@ class gabfire_ajaxtabs extends WP_Widget {
 						<ul>
 							<?php
 							$count=1;
-							$args = array( 'posts_per_page'=> $popular_nr, 'orderby' => 'comment_count');
+							$args = array( 'posts_per_page'=> $popular_nr, 'orderby' => 'comment_count', 'ignore_sticky_posts' => 1 );
 							$gab_query = new WP_Query();$gab_query->query($args);
 							while ($gab_query->have_posts()) : $gab_query->the_post();
 							?>
