@@ -62,6 +62,21 @@ class gab_custom_query extends WP_Widget {
 								'thumb_align' => $thumbalign,
 								'enable_default' => 0
 							));
+						} elseif (function_exists('gabfire_media')) {
+							gabfire_media(array(
+								'name' => 'custom-query',
+								'imgtag' => 1,
+								'link' => 1,
+								'enable_video' => 0,
+								'video_id' => 'custom-widget',
+								'catch_image' => 0,
+								'enable_thumb' => 1,
+								'resize_type' => 'c',
+								'media_width' => 32, 
+								'media_height' => 32, 
+								'thumb_align' => $thumbalign,
+								'enable_default' => 0
+							));
 						} else {
 							add_image_size( 'custom-query', 35, 35, true );
 						} 
