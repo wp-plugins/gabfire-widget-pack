@@ -4,7 +4,7 @@ if ( !defined('ABSPATH')) exit;
 class gab_custom_query extends WP_Widget {
  
     function gab_custom_query() {
-        $widget_ops = array( 'classname' => 'gab_custom_query', 'description' => 'Popular, Random or Recent Entries' );
+        $widget_ops = array( 'classname' => 'gabfire-poprandom', 'description' => 'Popular, Random or Recent Entries' );
         $control_ops = array( 'width' => 520, 'height' => 350, 'id_base' => 'gab_custom_query' );
         $this->WP_Widget( 'gab_custom_query', 'Gabfire: Random, Recent or Popular', $widget_ops, $control_ops);
     }
@@ -47,39 +47,8 @@ class gab_custom_query extends WP_Widget {
 
 					<?php
 					if ( $d_thumb ) { 
-						if (function_exists('gab_media')) {
-							gab_media(array(
-								'name' => 'custom-query',
-								'imgtag' => 1,
-								'link' => 1,
-								'enable_video' => 0,
-								'video_id' => 'custom-widget',
-								'catch_image' => 0,
-								'enable_thumb' => 1,
-								'resize_type' => 'c',
-								'media_width' => 32, 
-								'media_height' => 32, 
-								'thumb_align' => $thumbalign,
-								'enable_default' => 0
-							));
-						} elseif (function_exists('gabfire_media')) {
-							gabfire_media(array(
-								'name' => 'custom-query',
-								'imgtag' => 1,
-								'link' => 1,
-								'enable_video' => 0,
-								'video_id' => 'custom-widget',
-								'catch_image' => 0,
-								'enable_thumb' => 1,
-								'resize_type' => 'c',
-								'media_width' => 32, 
-								'media_height' => 32, 
-								'thumb_align' => $thumbalign,
-								'enable_default' => 0
-							));
-						} else {
-							add_image_size( 'custom-query', 35, 35, true );
-						} 
+						$postimage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+						echo "<img src='$postimage' class='$thumbalign'>";	
 					} ?>
 						<h2 class="<?php if ( $titlecls ) { echo $titlecls; } else { echo 'posttitle'; } ?>">
 							<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf( esc_attr__( 'Permalink to %s', 'gabfire-widget-pack' ), the_title_attribute( 'echo=0' ) ); ?>" ><?php the_title(); ?></a>
