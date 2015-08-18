@@ -32,7 +32,7 @@ class gabfire_authorbadge extends WP_Widget {
 	function gabfire_authorbadge() {
 		$widget_ops = array( 'classname' => 'gabfire_authorbadge', 'description' => 'Display widget with a big icon' );
 		$control_ops = array( 'width' => 350, 'id_base' => 'gabfire_authorbadge' );
-		$this->WP_Widget( 'gabfire_authorbadge', 'Gabfire: Author Badge', $widget_ops, $control_ops);	
+		parent::__construct( 'gabfire_authorbadge', 'Gabfire: Author Badge', $widget_ops, $control_ops);	
 	}
 	
 	public function widget($args, $instance) {

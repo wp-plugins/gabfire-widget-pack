@@ -6,7 +6,7 @@ class gabfire_search extends WP_Widget {
 	function gabfire_search() {
 		$widget_ops = array( 'classname' => 'gabfire_search_widget', 'description' => 'Display Search Form' );
 		$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'gabfire_search_widget' );
-		$this->WP_Widget( 'gabfire_search_widget', 'Gabfire: Search', $widget_ops, $control_ops);
+		parent::__construct( 'gabfire_search_widget', 'Gabfire: Search', $widget_ops, $control_ops);
 	}
  
 	public function widget($args, $instance) {	  

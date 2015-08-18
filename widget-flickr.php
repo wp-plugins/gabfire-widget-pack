@@ -6,7 +6,7 @@ class gabfire_flickrrss extends WP_Widget {
 	function gabfire_flickrrss() {
 		$widget_ops = array( 'classname' => 'gabfire_flickr_widget', 'description' => 'Display flickr photos on your site' );
 		$control_ops = array( 'width' => 330, 'height' => 350, 'id_base' => 'gabfire_flickr_widget' );
-		$this->WP_Widget( 'gabfire_flickr_widget', 'Gabfire: Flickr Images', $widget_ops, $control_ops );
+		parent::__construct( 'gabfire_flickr_widget', 'Gabfire: Flickr Images', $widget_ops, $control_ops );
 	}
 
 	public function widget( $args, $instance ) {
@@ -61,16 +61,15 @@ class gabfire_flickrrss extends WP_Widget {
 	}
 	
 	function update( $new_instance, $old_instance ) {
-		$instance = $old_instance;
-		$instance['title'] 			= ( ! empty( $new_instance['title'] ) ) ? sanitize_text_field( $new_instance['title'] ) : '';
-		$instance['text'] 			= ( ! empty( $new_instance['text'] ) ) ? sanitize_text_field( $new_instance['text'] ) : '';
-		$instance['photo_source'] 	= ( ! empty( $new_instance['photo_source'] ) ) ? sanitize_text_field( $new_instance['photo_source'] ) : '';
-		$instance['flickr_id'] 		= ( ! empty( $new_instance['flickr_id'] ) ) ? sanitize_text_field( $new_instance['flickr_id'] ) : '';
-		$instance['flickr_tag'] 	= ( ! empty( $new_instance['flickr_tag'] ) ) ? sanitize_text_field( $new_instance['flickr_tag'] ) : '';
-		$instance['display'] 		= ( ! empty( $new_instance['display'] ) ) ? sanitize_text_field( $new_instance['display'] ) : '';
-		$instance['size'] 			= ( ! empty( $new_instance['size'] ) ) ? sanitize_text_field( $new_instance['size'] ) : '';
-		$instance['photo_number'] 	= ( ! empty( $new_instance['photo_number'] ) ) ? sanitize_text_field( (int)$new_instance['photo_number'] ) : '';
-
+		$instance['title']        = strip_tags( $new_instance['title'] );
+		$instance['text']         = strip_tags( $new_instance['text'] );
+		$instance['photo_number'] = (int)( $new_instance['photo_number'] );
+		$instance['photo_source'] = strip_tags( $new_instance['photo_source'] );
+		$instance['flickr_id']    = strip_tags( $new_instance['flickr_id'] );
+		$instance['flickr_tag']   = strip_tags( $new_instance['flickr_tag'] );
+		$instance['display']      = strip_tags( $new_instance['display'] );
+		$instance['size']         = strip_tags( $new_instance['size'] );
+		
 		return $instance;
 	}
 

@@ -6,7 +6,7 @@ class gabfire_archive extends WP_Widget {
 	function gabfire_archive() {
 		$widget_ops = array( 'classname' => 'gabfire_archive_widget', 'description' => 'Search in Archive');
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'gabfire_archive_widget' );
-		$this->WP_Widget( 'gabfire_archive_widget', 'Gabfire: Archive Search', $widget_ops, $control_ops);
+		parent::__construct( 'gabfire_archive_widget', 'Gabfire: Archive Search', $widget_ops, $control_ops);
 	}	
 	
 	public function widget( $args, $instance ) {

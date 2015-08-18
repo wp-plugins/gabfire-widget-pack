@@ -1,15 +1,16 @@
 <?php
 if ( !defined('ABSPATH')) exit;
 
-class gabfire_flickrrss extends WP_Widget {
+class gabfire_instagramrss extends WP_Widget {
 
-	function gabfire_flickrrss() {
-		$widget_ops = array( 'classname' => 'gabfire_flickr_widget', 'description' => 'Display flickr photos on your site' );
-		$control_ops = array( 'width' => 330, 'height' => 350, 'id_base' => 'gabfire_flickr_widget' );
-		$this->WP_Widget( 'gabfire_flickr_widget', 'Gabfire: Flickr Images', $widget_ops, $control_ops );
+	function gabfire_instagramrss() {
+		$widget_ops = array( 'classname' => 'gabfire_instagram_widget', 'description' => 'Instagram Photo Stream' );
+		$control_ops = array( 'width' => 330, 'height' => 350, 'id_base' => 'gabfire_instagram_widget' );
+		parent::__construct( 'gabfire_instagram_widget', 'Gabfire: Instagram Photos', $widget_ops, $control_ops );
 	}
 
 	public function widget( $args, $instance ) {
+		
 		extract( $args );
 		$title 			= apply_filters('widget_title', $instance['title'] );
 		$photos_of      = $instance['photos_of'];
@@ -167,8 +168,8 @@ class gabfire_flickrrss extends WP_Widget {
 	}
 }
 
-function register_gabfire_flickrrss() {
-	register_widget('gabfire_flickrrss');
+function register_gabfire_instagramrss() {
+	register_widget('gabfire_instagramrss');
 }
 
-add_action('widgets_init', 'register_gabfire_flickrrss');
+add_action('widgets_init', 'register_gabfire_instagramrss');

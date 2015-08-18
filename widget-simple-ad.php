@@ -6,7 +6,7 @@ class gabfire_simplead extends WP_Widget {
 	function gabfire_simplead() {
 		$widget_ops = array( 'classname' => 'gabfire_simplead_widget', 'description' => __('Gabfire Widget: Simple Banner', 'gabfire'));
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'gabfire_simplead_widget' );
-		$this->WP_Widget( 'gabfire_simplead_widget', __('Gabfire Widget: Simple Banner', 'gabfire'), $widget_ops, $control_ops);
+		parent::__construct( 'gabfire_simplead_widget', __('Gabfire Widget: Simple Banner', 'gabfire'), $widget_ops, $control_ops);
 	}	
 	
 	public function widget( $args, $instance ) {

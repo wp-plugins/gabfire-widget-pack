@@ -6,7 +6,7 @@ class gab_custom_query extends WP_Widget {
     function gab_custom_query() {
         $widget_ops = array( 'classname' => 'gab_custom_query', 'description' => 'Query custom entries' );
         $control_ops = array( 'width' => 520, 'height' => 350, 'id_base' => 'gab_custom_query' );
-        $this->WP_Widget( 'gab_custom_query', 'Gabfire: Custom Content Query', $widget_ops, $control_ops);
+        parent::__construct( 'gab_custom_query', 'Gabfire: Custom Content Query', $widget_ops, $control_ops);
     }
  
     public function widget($args, $instance) {      

@@ -26,7 +26,7 @@
 
 /* Load options panel and define Constants
  ***********************************************************************************/
-	define( 'GABFIRE_WIDGETS_VERSION', '1.4.11');
+	define( 'GABFIRE_WIDGETS_VERSION', '1.4.12');
 	define( 'GABFIRE_WIDGETS_DIR', dirname(__FILE__) );
 	define( 'GABFIRE_WIDGETS_URL', plugins_url().'/gabfire-widget-pack' );
 
@@ -88,6 +88,10 @@
 	if (isset($gabfire_options['videos']) && $gabfire_options['videos'] == 1) {
 		require_once (GABFIRE_WIDGETS_DIR . '/widget-videos.php');
 	} 
+	
+	if (isset($gabfire_options['instagram']) && $gabfire_options['instagram'] == 1) {
+		require_once (GABFIRE_WIDGETS_DIR . '/widget-instagram.php');
+	} 	
 	
 	if (isset($gabfire_options['about_widget']) && $gabfire_options['about_widget'] == 1) {
 		require_once (GABFIRE_WIDGETS_DIR . '/widget-about.php');

@@ -6,7 +6,7 @@ class gabfire_contactus extends WP_Widget {
 	function gabfire_contactus() {
 		$widget_ops = array( 'classname' => 'gab_contact_widget', 'description' => 'Display an "about" widget' );
 		$control_ops = array( 'width' => 400, 'height' => 350, 'id_base' => 'gab_contact_widget' );
-		$this->WP_Widget( 'gab_contact_widget', 'Gabfire: Contact', $widget_ops, $control_ops);	
+		parent::__construct( 'gab_contact_widget', 'Gabfire: Contact', $widget_ops, $control_ops);	
 	}
 	
 	public function widget($args, $instance) {

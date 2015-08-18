@@ -6,7 +6,7 @@ class gab_share extends WP_Widget {
 	function gab_share() {
 		$widget_ops = array( 'classname' => 'gabfire_share_widget', 'description' => 'Display share icons for entries' );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'gabfire_share_widget' );
-		$this->WP_Widget( 'gabfire_share_widget', 'Gabfire: Share Items', $widget_ops, $control_ops);
+		parent::__construct( 'gabfire_share_widget', 'Gabfire: Share Items', $widget_ops, $control_ops);
 	}
 	public function widget($args, $instance) {
 		extract( $args );

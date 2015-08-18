@@ -6,7 +6,7 @@ class gabfire_relatedposts extends WP_Widget {
 	function gabfire_relatedposts() {
 		$widget_ops = array( 'classname' => 'gabfire_relatedposts', 'description' => 'Display related post with thumbnails' );
 		$control_ops = array( 'width' => 250, 'id_base' => 'gabfire_relatedposts' );
-		$this->WP_Widget( 'gabfire_relatedposts', 'Gabfire: Related Posts Thumbs', $widget_ops, $control_ops);	
+		parent::__construct( 'gabfire_relatedposts', 'Gabfire: Related Posts Thumbs', $widget_ops, $control_ops);	
 	}
 	
 	public function widget($args, $instance) {

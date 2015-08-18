@@ -13,7 +13,7 @@ class gabfire_ajaxtabs extends WP_Widget {
 	function gabfire_ajaxtabs() {
 		$widget_ops = array( 'classname' => 'gabfire_ajaxtabs', 'description' => 'Display recent entries and comments (ajax tab supported)' );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'gabfire_ajaxtabs' );
-		$this->WP_Widget( 'gabfire_ajaxtabs', 'Gabfire: Posts Tabs Widget', $widget_ops, $control_ops);
+		parent::__construct( 'gabfire_ajaxtabs', 'Gabfire: Posts Tabs Widget', $widget_ops, $control_ops);
 	}
 
 	public function widget($args, $instance) {

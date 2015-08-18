@@ -6,7 +6,7 @@ class gab_text_widget extends WP_Widget {
 	function gab_text_widget() {
 		$widget_ops = array( 'classname' => 'gab_text_widget', 'description' => 'Display text widget with an icon' );
 		$control_ops = array( 'width' => 400, 'height' => 350, 'id_base' => 'gab_text_widget' );
-		$this->WP_Widget( 'gab_text_widget', 'Gabfire: Text+ Widget', $widget_ops, $control_ops);	
+		parent::__construct( 'gab_text_widget', 'Gabfire: Text+ Widget', $widget_ops, $control_ops);	
 	}
 	
 	public function widget($args, $instance) {

@@ -6,7 +6,7 @@ class gab_social extends WP_Widget {
 	function gab_social() {
 		$widget_ops = array( 'classname' => 'gabfire_social_widget', 'description' => 'Display social icons on your site' );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'gabfire_social_widget' );
-		$this->WP_Widget( 'gabfire_social_widget', 'Gabfire: Social Icons', $widget_ops, $control_ops);	
+		parent::__construct( 'gabfire_social_widget', 'Gabfire: Social Icons', $widget_ops, $control_ops);	
 	}
 	public function widget($args, $instance) {
 		extract( $args );

@@ -6,7 +6,7 @@ class gabfire_videos extends WP_Widget {
 	function gabfire_videos() {
 		$widget_ops = array( 'classname' => 'gabfire-videos-widget', 'description' => 'Get the videos added via Custom Fields' );
 		$control_ops = array( 'width' => 400, 'height' => 350, 'id_base' => 'gabfire-videos-widget' );
-		$this->WP_Widget( 'gabfire-videos-widget', 'Gabfire: Videos', $widget_ops, $control_ops);	
+		parent::__construct( 'gabfire-videos-widget', 'Gabfire: Videos', $widget_ops, $control_ops);	
 	}
 	
 	public function widget($args, $instance) {

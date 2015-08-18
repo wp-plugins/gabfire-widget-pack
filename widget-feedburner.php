@@ -6,7 +6,7 @@ class gabfire_feedburner extends WP_Widget {
 	function gabfire_feedburner() {
 		$widget_ops = array( 'classname' => 'gabfire_feedburner_widget', 'description' => 'Feedburner Email Subscribe');
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'gabfire_feedburner_widget' );
-		$this->WP_Widget( 'gabfire_feedburner_widget', 'Gabfire: Feedburner Email Subscribe', $widget_ops, $control_ops);
+		parent::__construct( 'gabfire_feedburner_widget', 'Gabfire: Feedburner Email Subscribe', $widget_ops, $control_ops);
 	}	
 	
 	public function widget( $args, $instance ) {
